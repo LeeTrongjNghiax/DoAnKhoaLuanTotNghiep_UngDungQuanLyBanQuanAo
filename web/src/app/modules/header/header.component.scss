@@ -1,0 +1,26 @@
+:host {
+  ul {
+    list-style-type: none;
+    display: flex;
+    background: var(--secondary-bg-color);
+
+    li {
+      padding: var(--gap);
+      display: flex;
+      align-items: center;
+
+      a {
+        color: var(--secondary-text-color);
+        text-decoration: none;
+      }
+    }
+
+    :nth-last-child(2) {
+      margin-left: auto;
+    }
+
+    .search {
+      flex: 1;
+    }
+  }
+}

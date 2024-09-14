@@ -1,0 +1,22 @@
+:host {
+  background: var(--secondary-bg-color);
+  display: flex;
+
+  section {
+    flex: 1;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--gap);
+    
+    p {
+      color: var(--secondary-text-color);
+      text-decoration: none;
+    }
+
+    .label {
+      font-weight: 600;
+    }
+  }
+}

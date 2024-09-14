@@ -26,6 +26,19 @@ $web-theme: mat.define-theme((
 // that you are using.
 :root {
   @include mat.all-component-themes($web-theme);
+
+  --primary-bg-color: #fff;
+  --primary-text-color: #000;
+  --secondary-bg-color: #008000;
+  --secondary-text-color: #fff;
+  --gap: 10px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 20px;
 }
 
 // Comment out the line below if you want to use the pre-defined typography utility classes.
