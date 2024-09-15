@@ -1,0 +1,15 @@
+:host {
+  width: 100%;
+
+  button {
+    padding: 10px;
+    display: flex;
+    gap: var(--gap);
+    align-items: center;
+    justify-content: center;
+
+    svg-icon {
+      height: 24px;
+    }
+  }
+}

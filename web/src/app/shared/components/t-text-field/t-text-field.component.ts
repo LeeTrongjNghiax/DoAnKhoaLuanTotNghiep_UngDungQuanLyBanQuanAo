@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, forwardRef, Input, Output } from '@angular/core';
 import { ControlValueAccessor, FormsModule, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { NzInputModule } from 'ng-zorro-antd/input';
 
 @Component({
   selector: 'app-t-text-field',
   standalone: true,
-  imports: [ CommonModule, FormsModule ],
+  imports: [ CommonModule, FormsModule, NzInputModule ],
   templateUrl: './t-text-field.component.html',
   styleUrl: './t-text-field.component.scss', 
   providers: [

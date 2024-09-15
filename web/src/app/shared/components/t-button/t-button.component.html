@@ -1,0 +1,10 @@
+<button 
+  nz-button 
+  nzType="primary" 
+  nzSize="large" 
+  nzBlock="true" 
+  [disabled]="isDisabled"
+>
+  <svg-icon *ngIf="iconName" src="/{{ iconName }}.svg"></svg-icon>
+  {{ label }}
+</button>
