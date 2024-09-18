@@ -4,11 +4,10 @@
 
   section {
     flex: 1;
-    padding: 60px;
+    padding: 32px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: var(--gap);
     
     p {
       color: var(--secondary-text-color);

@@ -27,6 +27,11 @@ p, a, label, button, span {
   font-size: 20px;
 }
 
+svg-icon {
+  display: flex;
+  align-items: center;
+}
+
 .error {
   color: #ff0000;
 }

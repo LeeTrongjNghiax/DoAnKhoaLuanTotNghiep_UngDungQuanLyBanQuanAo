@@ -4,13 +4,13 @@
   <div class="input-group">
     <label>
       Nhap ma OTP ma chung toi da gui ve dia chi email <span>{{ email }}</span> de xac nhan viec dang ky 
-      tai khoan ABC
+      tai khoan ABC:
     </label>
     <app-t-text-field placeholder="OTP"></app-t-text-field>
   </div>
   
   <div class="input-group">
-    <app-t-button label="Tiep tuc"></app-t-button>
+    <app-t-button (click)="onClick()" label="Tiep tuc"></app-t-button>
   </div>
 </form>
 

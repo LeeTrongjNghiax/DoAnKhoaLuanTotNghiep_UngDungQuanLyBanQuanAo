@@ -43,5 +43,5 @@ export class TTextFieldComponent implements ControlValueAccessor {
   public registerOnTouched(fn: any): void { 
     this.onTouch = fn;
   }
-  public setDisabledState?(isDisabled: boolean): void { }
+  public setDisabledState?(): void { }
 }

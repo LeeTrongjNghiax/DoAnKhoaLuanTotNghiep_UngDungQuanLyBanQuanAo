@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TTextFieldComponent } from '../../shared/components/t-text-field/t-text-field.component';
 import { TButtonComponent } from '../../shared/components/t-button/t-button.component';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Route, Router } from '@angular/router';
 import { switchMap } from 'rxjs';
 
 @Component({
@@ -14,9 +14,16 @@ import { switchMap } from 'rxjs';
 export class OtpInputComponent implements OnInit {
   public email: string | null = '';
 
-  public constructor(private route: ActivatedRoute) {}
+  public constructor(
+    private activeRoute: ActivatedRoute, 
+    private route: Router, 
+  ) {}
 
   public ngOnInit(): void {
-    this.email = this.route.snapshot.paramMap.get("email");
+    this.email = this.activeRoute.snapshot.paramMap.get("email");
+  }
+
+  public onClick() {
+    this.route.navigate(['sign-up']);
   }
 }

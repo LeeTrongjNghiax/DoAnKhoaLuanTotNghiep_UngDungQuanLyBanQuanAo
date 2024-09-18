@@ -1,1 +1,59 @@
-<p>login works!</p>
+<form [formGroup]="formUserAdd.form">
+  <h1>Dang nhap</h1>
+
+  <div class="input-group">
+    <label>Ten tai khoan:</label>
+    <app-t-text-field 
+      formControlName="username"
+      placeholder="Ten tai khoan"
+    >
+    </app-t-text-field>
+    <p 
+      class="error"
+      *ngIf="formUserAdd.form.controls['username'].touched"  
+    >
+      <span *ngIf="formUserAdd.form.controls['username'].errors?.['required']">
+        Ten tai khoan khong duoc de trong
+      </span>
+    </p>
+  </div>
+  
+  <div class="input-group">
+    <label>Mat khau:</label>
+    <app-t-text-field 
+      formControlName="password"
+      placeholder="Mat khau"
+    >
+    </app-t-text-field>
+    <p 
+      class="error"
+      *ngIf="formUserAdd.form.controls['password'].touched"  
+    >
+      <span *ngIf="formUserAdd.form.controls['password'].errors?.['required']">
+        Mat khau khong duoc de trong
+      </span>
+    </p>
+  </div>
+
+  <div class="save-account-and-forgot-password-group">
+    <app-t-checkbox-with-label label="Ghi nho tai khoan">
+    </app-t-checkbox-with-label>
+
+    <app-t-link link="sign-up" label="Quen mat khau?"></app-t-link>
+  </div>
+  
+  <div class="input-group">
+    <app-t-button 
+      [isDisabled]="isDisable()"
+      (click)="onClickLogIn()" 
+      iconName="log-in" 
+      label="Dang nhap"
+    >
+    </app-t-button>
+  </div>
+  <div class="save-account-and-forgot-password-group">
+    <p>Chua co tai khoan? Dang ky tai 
+      <app-t-link link="email-input" label="day"></app-t-link>
+    </p>
+  </div>
+</form>
