@@ -1,30 +1,41 @@
 import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, forwardRef, Input, Output } from '@angular/core';
 import { ControlValueAccessor, FormsModule, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { AngularSvgIconModule } from 'angular-svg-icon';
+import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzInputModule } from 'ng-zorro-antd/input';
 
 @Component({
-  selector: 'app-t-text-field',
+  selector: 'app-password-field',
   standalone: true,
-  imports: [ CommonModule, FormsModule, NzInputModule ],
-  templateUrl: './t-text-field.component.html',
-  styleUrl: './t-text-field.component.scss', 
+  imports: [ CommonModule, FormsModule, NzInputModule, AngularSvgIconModule ],
+  templateUrl: './password-field.component.html',
+  styleUrl: './password-field.component.scss', 
   providers: [
     {
       provide: NG_VALUE_ACCESSOR, 
-      useExisting: forwardRef(() => TTextFieldComponent), 
+      useExisting: forwardRef(() => TPasswordFieldComponent), 
       multi: true, 
     }
   ]
 })
-export class TTextFieldComponent implements ControlValueAccessor {
+export class TPasswordFieldComponent implements ControlValueAccessor {
   @Input() placeholder: string = '';
   @Input() value: string = '';
   @Output() changeValueEventEmitter: EventEmitter<string> =
     new EventEmitter<string>();
+  public isVisible: boolean = false;
 
   public onChange: Function = () => {}
   public onTouch: Function = () => {}
+
+  public get inputType() {
+    return this.isVisible ? 'text' : 'password';
+  }
+
+  public onChangeVisible() {
+    this.isVisible = !this.isVisible;
+  }
 
   public onModalChange(e: string) {
     this.value = e;

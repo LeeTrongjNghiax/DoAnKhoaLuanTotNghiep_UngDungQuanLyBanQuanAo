@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TTextFieldComponent } from './t-text-field.component';
+import { TLinkComponent } from './link.component';
 
-describe('TTextFieldComponent', () => {
-  let component: TTextFieldComponent;
-  let fixture: ComponentFixture<TTextFieldComponent>;
+describe('TLinkComponent', () => {
+  let component: TLinkComponent;
+  let fixture: ComponentFixture<TLinkComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [TTextFieldComponent]
+      imports: [TLinkComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(TTextFieldComponent);
+    fixture = TestBed.createComponent(TLinkComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

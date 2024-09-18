@@ -1,11 +1,11 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-t-link',
+  selector: 'app-link',
   standalone: true,
   imports: [],
-  templateUrl: './t-link.component.html',
-  styleUrl: './t-link.component.scss'
+  templateUrl: './link.component.html',
+  styleUrl: './link.component.scss'
 })
 export class TLinkComponent {
   @Input() link: string = '';

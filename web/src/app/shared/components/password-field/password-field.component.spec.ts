@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TLinkComponent } from './t-link.component';
+import { TPasswordFieldComponent } from './password-field.component';
 
-describe('TLinkComponent', () => {
-  let component: TLinkComponent;
-  let fixture: ComponentFixture<TLinkComponent>;
+describe('TPasswordFieldComponent', () => {
+  let component: TPasswordFieldComponent;
+  let fixture: ComponentFixture<TPasswordFieldComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [TLinkComponent]
+      imports: [TPasswordFieldComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(TLinkComponent);
+    fixture = TestBed.createComponent(TPasswordFieldComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

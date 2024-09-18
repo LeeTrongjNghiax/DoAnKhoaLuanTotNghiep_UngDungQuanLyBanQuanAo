@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { TTextFieldComponent } from "../../shared/components/t-text-field/t-text-field.component";
-import { TLinkComponent } from "../../shared/components/t-link/t-link.component";
 import { AngularSvgIconModule } from 'angular-svg-icon';
+import { TTextFieldComponent } from '../../shared/components/text-field/text-field.component';
+import { TLinkComponent } from '../../shared/components/link/link.component';
 
 @Component({
   selector: 'app-header',

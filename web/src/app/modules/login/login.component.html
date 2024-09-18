@@ -3,11 +3,11 @@
 
   <div class="input-group">
     <label>Ten tai khoan:</label>
-    <app-t-text-field 
+    <app-text-field 
       formControlName="username"
       placeholder="Ten tai khoan"
     >
-    </app-t-text-field>
+    </app-text-field>
     <p 
       class="error"
       *ngIf="formUserAdd.form.controls['username'].touched"  
@@ -20,11 +20,12 @@
   
   <div class="input-group">
     <label>Mat khau:</label>
-    <app-t-text-field 
+    <app-password-field
       formControlName="password"
       placeholder="Mat khau"
     >
-    </app-t-text-field>
+    </app-password-field>
+
     <p 
       class="error"
       *ngIf="formUserAdd.form.controls['password'].touched"  
@@ -36,24 +37,24 @@
   </div>
 
   <div class="save-account-and-forgot-password-group">
-    <app-t-checkbox-with-label label="Ghi nho tai khoan">
-    </app-t-checkbox-with-label>
+    <app-checkbox-with-label label="Ghi nho tai khoan">
+    </app-checkbox-with-label>
 
-    <app-t-link link="sign-up" label="Quen mat khau?"></app-t-link>
+    <app-link link="sign-up" label="Quen mat khau?"></app-link>
   </div>
   
   <div class="input-group">
-    <app-t-button 
+    <app-button 
       [isDisabled]="isDisable()"
       (click)="onClickLogIn()" 
       iconName="log-in" 
       label="Dang nhap"
     >
-    </app-t-button>
+    </app-button>
   </div>
   <div class="save-account-and-forgot-password-group">
     <p>Chua co tai khoan? Dang ky tai 
-      <app-t-link link="email-input" label="day"></app-t-link>
+      <app-link link="email-input" label="day"></app-link>
     </p>
   </div>
 </form>

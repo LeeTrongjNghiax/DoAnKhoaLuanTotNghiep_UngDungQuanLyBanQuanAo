@@ -4,11 +4,11 @@ import { AngularSvgIconModule } from 'angular-svg-icon';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 
 @Component({
-  selector: 'app-t-button',
+  selector: 'app-button',
   standalone: true,
   imports: [CommonModule, AngularSvgIconModule, NzButtonModule],
-  templateUrl: './t-button.component.html',
-  styleUrl: './t-button.component.scss', 
+  templateUrl: './button.component.html',
+  styleUrl: './button.component.scss'
 })
 export class TButtonComponent {
   @Input() iconName: string = '';

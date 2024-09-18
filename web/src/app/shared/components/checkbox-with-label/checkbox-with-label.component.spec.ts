@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TCheckboxWithLabelComponent } from './t-checkbox-with-label.component';
+import { TCheckboxWithLabelComponent } from './checkbox-with-label.component';
 
 describe('TCheckboxWithLabelComponent', () => {
   let component: TCheckboxWithLabelComponent;

@@ -5,18 +5,18 @@
     <label>
       Nhap email de chung toi gui ma OTP ve email de dang ky tai khoan
     </label>
-    <app-t-text-field
+    <app-text-field
       (changeValueEventEmitter)="onChangeEmail($event)" 
       placeholder="Email"
-    ></app-t-text-field>
-    <p *ngIf="!onValidateEmail()" class="error">Email khong hop le. Vui long nhap lai</p>
+    >
+    </app-text-field>
+    <p *ngIf="!onValidateEmail()" class="error">
+      Email khong hop le. Vui long nhap lai
+    </p>
   </div>
   
   <div class="input-group">
-    <app-t-button 
-      (click)="onClick()" 
-      label="Tiep tuc"
-    >
-    </app-t-button>
+    <app-button (click)="onClick()" label="Tiep tuc">
+    </app-button>
   </div>
 </form>

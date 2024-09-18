@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { TTextFieldComponent } from '../../shared/components/t-text-field/t-text-field.component';
-import { TButtonComponent } from '../../shared/components/t-button/t-button.component';
-import { ActivatedRoute, Route, Router } from '@angular/router';
-import { switchMap } from 'rxjs';
+import { ActivatedRoute, Router } from '@angular/router';
+import { TTextFieldComponent } from '../../shared/components/text-field/text-field.component';
+import { TButtonComponent } from '../../shared/components/button/button.component';
 
 @Component({
   selector: 'app-otp-input',

@@ -3,57 +3,57 @@
 
   <div class="input-group">
     <label>Ho ten:</label>
-    <app-t-text-field 
+    <app-text-field 
       (changeValueEventEmitter)="onChangeName($event)"
       placeholder="Ho ten"
     >
-    </app-t-text-field>
+    </app-text-field>
   </div>
   
   <div class="input-group">
     <label>So dien thoai:</label>
-    <app-t-text-field 
+    <app-text-field 
       (changeValueEventEmitter)="onChangePhoneNumber($event)"
       placeholder="So dien thoai"
     >
-    </app-t-text-field>
+    </app-text-field>
   </div>
   
   <div class="input-group">
     <label>Email:</label>
-    <app-t-text-field placeholder="Email"></app-t-text-field>
+    <app-text-field placeholder="Email"></app-text-field>
   </div>
   
   <div class="input-group">
     <label>Ten tai khoan:</label>
-    <app-t-text-field 
+    <app-text-field 
       (changeValueEventEmitter)="onChangeUsername($event)"
       placeholder="Ten tai khoan"
     >
-    </app-t-text-field>
+    </app-text-field>
     <p class="error">Email khong hop le. Vui long nhap lai</p>
   </div>
   
   <div class="input-group">
     <label>Mat khau:</label>
-    <app-t-text-field 
+    <app-text-field 
       (changeValueEventEmitter)="onChangePassword($event)"
       placeholder="Mat khau"
     >
-    </app-t-text-field>
+    </app-text-field>
     <p class="error">Email khong hop le. Vui long nhap lai</p>
   </div>
   
   <div class="input-group">
     <label>Xac nhan mat khau:</label>
-    <app-t-text-field 
+    <app-text-field 
       (changeValueEventEmitter)="onChangeConfirmPassword($event)"
       placeholder="Xac nhan mat khau"
     >
-    </app-t-text-field>
+    </app-text-field>
   </div>
   
   <div class="input-group">
-    <app-t-button label="Dang ky"></app-t-button>
+    <app-button label="Dang ky"></app-button>
   </div>
 </form>

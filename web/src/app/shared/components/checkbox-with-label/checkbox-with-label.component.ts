@@ -3,11 +3,11 @@ import { ControlValueAccessor, FormsModule, NG_VALUE_ACCESSOR } from '@angular/f
 import { NzCheckboxModule } from 'ng-zorro-antd/checkbox';
 
 @Component({
-  selector: 'app-t-checkbox-with-label',
+  selector: 'app-checkbox-with-label',
   standalone: true,
   imports: [FormsModule, NzCheckboxModule],
-  templateUrl: './t-checkbox-with-label.component.html',
-  styleUrl: './t-checkbox-with-label.component.scss', 
+  templateUrl: './checkbox-with-label.component.html',
+  styleUrl: './checkbox-with-label.component.scss', 
   providers: [
     {
       provide: NG_VALUE_ACCESSOR, 

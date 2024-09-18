@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { TTextFieldComponent } from "../../shared/components/t-text-field/t-text-field.component";
-import { TButtonComponent } from "../../shared/components/t-button/t-button.component";
 import { CommonModule } from '@angular/common';
+import { TTextFieldComponent } from '../../shared/components/text-field/text-field.component';
+import { TButtonComponent } from '../../shared/components/button/button.component';
 
 @Component({
   selector: 'app-sign-up',

@@ -1,14 +1,15 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnDestroy } from '@angular/core';
-import { TTextFieldComponent } from '../../shared/components/t-text-field/t-text-field.component';
-import { TButtonComponent } from '../../shared/components/t-button/t-button.component';
-import { TCheckboxWithLabelComponent } from "../../shared/components/t-checkbox-with-label/t-checkbox-with-label.component";
-import { TLinkComponent } from "../../shared/components/t-link/t-link.component";
 import { FormUserAddService } from '../../core/services/form-user-add.service';
 import { ReactiveFormsModule } from '@angular/forms';
 import { UserService } from '../../core/services/user.service';
 import { IUserLoginParams } from '../../../interfaces/api/parameters/user-login-params.interface';
 import { Subject, takeUntil } from 'rxjs';
+import { TTextFieldComponent } from '../../shared/components/text-field/text-field.component';
+import { TButtonComponent } from '../../shared/components/button/button.component';
+import { TCheckboxWithLabelComponent } from '../../shared/components/checkbox-with-label/checkbox-with-label.component';
+import { TLinkComponent } from '../../shared/components/link/link.component';
+import { TPasswordFieldComponent } from '../../shared/components/password-field/password-field.component';
 
 @Component({
   selector: 'app-login',
@@ -18,9 +19,10 @@ import { Subject, takeUntil } from 'rxjs';
     TTextFieldComponent,
     TButtonComponent,
     TCheckboxWithLabelComponent,
-    TLinkComponent, 
-    ReactiveFormsModule, 
-  ],
+    TLinkComponent,
+    ReactiveFormsModule,
+    TPasswordFieldComponent
+],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'
 })
