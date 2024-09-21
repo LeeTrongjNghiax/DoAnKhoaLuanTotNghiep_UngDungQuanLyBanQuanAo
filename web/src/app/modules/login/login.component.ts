@@ -10,6 +10,8 @@ import { TCheckboxWithLabelComponent } from '../../shared/components/checkbox-wi
 import { TLinkComponent } from '../../shared/components/link/link.component';
 import { TPasswordFieldComponent } from '../../shared/components/password-field/password-field.component';
 import { FormUserLoginService } from '../../core/services/form-user-login.service';
+import { IUserLoginResponse } from '../../../interfaces/api/response/user-login-response.interface';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -42,13 +44,24 @@ export class LoginComponent implements OnDestroy {
     this.userService.login(params)
       .pipe(takeUntil(this.destroy))
       .subscribe(
-        (response) => console.log(response), 
-        (response) => console.log(response), 
+        (response: IUserLoginResponse) => this.onLoginSuccess(response), 
+        (response: IUserLoginResponse) => this.onLoginFail(response), 
       );
   }
 
+  private onLoginSuccess(res: IUserLoginResponse) {
+    console.log(res);
+    this.route.navigate(['']);
+  }
+
+  private onLoginFail(res: IUserLoginResponse) {
+    console.log(res);
+  }
+
+
   public constructor (
     public formUserLogin: FormUserLoginService, 
+    private route: Router, 
     private userService: UserService, 
   ) {}
 

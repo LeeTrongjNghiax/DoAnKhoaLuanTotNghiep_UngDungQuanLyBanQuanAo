@@ -39,12 +39,11 @@ export class OtpInputComponent implements OnInit, OnDestroy {
         (response: IUserRegisterResponse) => this.onRegisterSuccess(response), 
         (response: IUserRegisterResponse) => this.onRegisterFail(response), 
       )
-
-    this.route.navigate(['sign-up']);
   }
 
   private onRegisterSuccess(res: IUserRegisterResponse) {
     console.log(res);
+    this.route.navigate(['']);
   }
 
   private onRegisterFail(res: IUserRegisterResponse) {

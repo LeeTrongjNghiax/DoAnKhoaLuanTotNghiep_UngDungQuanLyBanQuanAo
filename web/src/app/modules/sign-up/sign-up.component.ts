@@ -9,23 +9,35 @@ import { FormUserAddService } from '../../core/services/form-user-add.service';
 import { Router } from '@angular/router';
 import { IUserSendOtpParams } from '../../../interfaces/api/parameters/user-send-otp-params';
 import { IUserSendOtpResponse } from '../../../interfaces/api/response/user-send-otp-response';
+import { TPasswordFieldComponent } from "../../shared/components/password-field/password-field.component";
+import { ObjectHasPropertyPipe } from '../../shared/pipes/object-has-property.pipe';
 
 @Component({
   selector: 'app-sign-up',
   standalone: true,
   imports: [
-    CommonModule, 
-    TTextFieldComponent, 
-    TButtonComponent, 
-    ReactiveFormsModule
-  ],
+    CommonModule,
+    TTextFieldComponent,
+    TButtonComponent,
+    ReactiveFormsModule,
+    TPasswordFieldComponent,
+    ObjectHasPropertyPipe
+],
   templateUrl: './sign-up.component.html',
   styleUrl: './sign-up.component.scss'
 })
 export class SignUpComponent implements OnDestroy {
   public destroy = new Subject<void>();
+  public isFormSubmited: boolean = false;
 
   public onRegister() {
+    this.isFormSubmited = true;
+
+    if (!this.formUserAdd.form.valid) {
+      this.formUserAdd.form.markAllAsTouched();
+      return;
+    }
+
     const params: IUserSendOtpParams = {
       email: this.formUserAdd.form.value.email || ''
     }
@@ -36,14 +48,13 @@ export class SignUpComponent implements OnDestroy {
         (response: IUserSendOtpResponse) => this.onSendOtpSuccess(response), 
         (response: IUserSendOtpResponse) => this.onSendOtpFail(response), 
       )
-
-    this.router.navigate(
-      [`/otp-input`, { email: this.formUserAdd.form.value.email }], 
-    );
   }
 
   private onSendOtpSuccess(res: IUserSendOtpResponse) {
     console.log(res);
+    this.router.navigate(
+      [`/otp-input`, { email: this.formUserAdd.form.value.email }], 
+    );
   }
 
   private onSendOtpFail(res: IUserSendOtpResponse) {

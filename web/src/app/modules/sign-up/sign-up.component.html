@@ -2,62 +2,183 @@
   <h1 class="uppercase">Đăng ký tài khoản</h1>
 
   <div class="input-group">
-    <label>Họ tên:</label>
-    <app-text-field 
-      formControlName="username"
-      placeholder="Họ tên. Ví dụ: Nguyễn Văn A"
-    >
-    </app-text-field>
-  </div>
-  
-  <div class="input-group">
-    <label>Số điện thoại:</label>
+    <label>
+      Số điện thoại:
+      <span 
+        class="error"
+        *ngIf="
+          formUserAdd.form.controls['phone'].errors | 
+          objectHasProperty: 'required'
+        "
+      >*</span>
+    </label>
+
     <app-text-field 
       formControlName="phone"
       placeholder="Số điện thoại. Ví dụ: 0912345678"
     >
     </app-text-field>
+
+    <span 
+      class="error"
+      *ngIf="
+        formUserAdd.form.controls['phone'].touched &&
+        formUserAdd.form.controls['phone'].errors?.['required']
+      "
+    >
+      Số điện thoại không được để trống
+    </span>
+    <span 
+      class="error"
+      *ngIf="
+        isFormSubmited && 
+        formUserAdd.form.controls['phone'].errors?.['pattern']
+      "
+    >
+      Số điện thoại phải có 10 chữ số và bắt đầu bằng số 0
+    </span>
   </div>
   
   <div class="input-group">
-    <label>Email:</label>
+    <label>
+      Email:
+      <span 
+        class="error"
+        *ngIf="
+          formUserAdd.form.controls['email'].errors | 
+          objectHasProperty: 'required'
+        "
+      >*</span>
+    </label>
     <app-text-field 
       formControlName="email"
       placeholder="Email. Ví dụ: tranbao@gmail.com"
     ></app-text-field>
+
+    <span 
+      class="error"
+      *ngIf="
+        formUserAdd.form.controls['email'].touched &&
+        formUserAdd.form.controls['email'].errors?.['required']
+      "
+    >
+      Email không được để trống
+    </span>
+    <span 
+      class="error"
+      *ngIf="
+        isFormSubmited && 
+        formUserAdd.form.controls['email'].errors?.['pattern']
+      "
+    >
+      Email phải bắt đầu bằng chữ cái, không được chứa kí tự đặc biệt và kết thúc
+      bằng &#64;gmail.com
+    </span>
   </div>
   
   <div class="input-group">
-    <label>Tên tài khoản:</label>
+    <label>
+      Tên tài khoản:
+      <span 
+        class="error"
+        *ngIf="
+          formUserAdd.form.controls['name'].errors | 
+          objectHasProperty: 'required'
+        "
+      >*</span>
+    </label>
     <app-text-field 
       formControlName="name"
       placeholder="Tên tài khoản. Ví dụ: LeTrongNghia"
     >
     </app-text-field>
+
+    <span 
+      class="error"
+      *ngIf="
+        formUserAdd.form.controls['name'].touched &&
+        formUserAdd.form.controls['name'].errors?.['required']
+      "
+    >
+      Tên tài khoản không được để trống
+    </span>
+    <span 
+      class="error"
+      *ngIf="
+        isFormSubmited && 
+        formUserAdd.form.controls['name'].errors?.['pattern']
+      "
+    >
+      Tên phải bắt đầu bằng chữ cái và không được chứa kí tự đặc biệt
+    </span>
   </div>
   
   <div class="input-group">
-    <label>Mật khẩu:</label>
-    <app-text-field 
+    <label>
+      Mật khẩu:
+      <span 
+        class="error"
+        *ngIf="
+          formUserAdd.form.controls['password'].errors | 
+          objectHasProperty: 'required'
+        "
+      >*</span>
+    </label>
+    <app-password-field
       formControlName="password"
       placeholder="Mật khẩu"
     >
-    </app-text-field>
+    </app-password-field>
+
+    <span 
+      class="error"
+      *ngIf="
+        formUserAdd.form.controls['password'].touched &&
+        formUserAdd.form.controls['password'].errors?.['required']
+      "
+    >
+      Mật khẩu không được để trống
+    </span>
+    <span 
+      class="error"
+      *ngIf="
+        isFormSubmited && 
+        formUserAdd.form.controls['password'].errors?.['pattern']
+      "
+    >
+      Mật khẩu phải dài ít nhất 8 kí tự
+    </span>
   </div>
   
   <div class="input-group">
-    <label>Xác nhận mật khẩu:</label>
-    <app-text-field 
+    <label>
+      Xác nhận mật khẩu:
+      <span 
+        class="error"
+        *ngIf="
+          formUserAdd.form.controls['confirmPassword'].errors | 
+          objectHasProperty: 'required'
+        "
+      >*</span>
+    </label>
+    <app-password-field
       formControlName="confirmPassword"
       placeholder="Xác nhận mật khẩu"
     >
-    </app-text-field>
+    </app-password-field>
+
+    <span 
+      class="error"
+      *ngIf="
+        formUserAdd.form.controls['confirmPassword'].value !==
+        formUserAdd.form.controls['confirmPassword'].value
+      "
+    >
+      Xác nhận mật khẩu phải giống với mật khẩu
+    </span>
   </div>
   
-  <div 
-    class="input-group"
-    (click)="onRegister()" 
-  >
+  <div (click)="onRegister()" class="input-group">
     <app-button label="Đăng ký"></app-button>
   </div>
 </form>

@@ -6,11 +6,26 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class FormUserAddService {
   readonly form = new FormGroup({
-    name: new FormControl('', [Validators.required]), 
-    password: new FormControl('', [Validators.required]), 
-    confirmPassword: new FormControl('', [Validators.required]), 
-    phone: new FormControl('', [Validators.required]), 
-    email: new FormControl('', [Validators.required]), 
+    name: new FormControl('', [
+      Validators.required, 
+      Validators.pattern(/^[A-Za-z][A-Za-z0-9 ]*$/gi)
+    ]), 
+    password: new FormControl('', [
+      Validators.required, 
+      Validators.pattern(/^[A-Za-z0-9]{8,}$/gi)
+    ]), 
+    confirmPassword: new FormControl('', [
+      Validators.required, 
+      Validators.pattern(/^[A-Za-z0-9]{8,}$/gi)
+    ]), 
+    phone: new FormControl('', [
+      Validators.required, 
+      Validators.pattern(/^0\d{9}$/gi)
+    ]), 
+    email: new FormControl('', [
+      Validators.required, 
+      Validators.pattern(/^[A-Za-z][A-Za-z0-9]*@gmail.com$/gi)
+    ]), 
   })
 
   public clearForm() {
