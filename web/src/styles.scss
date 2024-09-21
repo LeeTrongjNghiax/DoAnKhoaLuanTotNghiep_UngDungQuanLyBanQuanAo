@@ -4,10 +4,15 @@
 :root {
   --primary-bg-color: #fff;
   --primary-text-color: #000;
-  --secondary-bg-color: #008000;
+  --secondary-bg-color: #343a40;
   --secondary-text-color: #fff;
   --gap: 10px;
+  --main-content-margin: 60px;
   --border-radius: 5px;
+}
+
+.uppercase {
+  text-transform: uppercase;
 }
 
 * {
@@ -19,7 +24,7 @@
   font-style: normal;
 }
 
-h1 {
+h1, ul {
   margin: 0;
 }
 

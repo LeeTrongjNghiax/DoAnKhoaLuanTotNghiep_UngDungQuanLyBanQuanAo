@@ -1,6 +1,5 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnDestroy } from '@angular/core';
-import { FormUserAddService } from '../../core/services/form-user-add.service';
 import { ReactiveFormsModule } from '@angular/forms';
 import { UserService } from '../../core/services/user.service';
 import { IUserLoginParams } from '../../../interfaces/api/parameters/user-login-params.interface';
@@ -10,6 +9,7 @@ import { TButtonComponent } from '../../shared/components/button/button.componen
 import { TCheckboxWithLabelComponent } from '../../shared/components/checkbox-with-label/checkbox-with-label.component';
 import { TLinkComponent } from '../../shared/components/link/link.component';
 import { TPasswordFieldComponent } from '../../shared/components/password-field/password-field.component';
+import { FormUserLoginService } from '../../core/services/form-user-login.service';
 
 @Component({
   selector: 'app-login',
@@ -30,27 +30,25 @@ export class LoginComponent implements OnDestroy {
   public destroy = new Subject<void>();
 
   public isDisable() {
-    return this.formUserAdd.form.invalid;
+    return this.formUserLogin.form.invalid;
   }
 
   public onClickLogIn() {
     const params: IUserLoginParams = {
-      username: this.formUserAdd.form.value.username || '', 
-      password: this.formUserAdd.form.value.password || '', 
+      username: this.formUserLogin.form.value.username || '', 
+      password: this.formUserLogin.form.value.password || '', 
     }
-
-    console.log(this.formUserAdd.form.valid);
 
     this.userService.login(params)
       .pipe(takeUntil(this.destroy))
       .subscribe(
-        () => console.log(''), 
-        () => console.log(''), 
+        (response) => console.log(response), 
+        (response) => console.log(response), 
       );
   }
 
   public constructor (
-    public formUserAdd: FormUserAddService, 
+    public formUserLogin: FormUserLoginService, 
     private userService: UserService, 
   ) {}
 
@@ -58,6 +56,6 @@ export class LoginComponent implements OnDestroy {
     this.destroy.next();
     this.destroy.complete();
 
-    this.formUserAdd.clearForm();
+    this.formUserLogin.clearForm();
   }
 }

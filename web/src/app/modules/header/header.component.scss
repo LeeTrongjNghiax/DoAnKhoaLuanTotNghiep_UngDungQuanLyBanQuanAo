@@ -5,7 +5,7 @@
     background: var(--secondary-bg-color);
 
     li {
-      padding: var(--gap);
+      padding: 20px;
       display: flex;
       align-items: center;
 
@@ -20,7 +20,7 @@
     }
 
     .search {
-      flex: 1;
+      // flex: 1;
     }
   }
 }

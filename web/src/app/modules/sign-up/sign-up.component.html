@@ -1,59 +1,63 @@
-<form>
-  <h1>Dang ky tai khoan ABC</h1>
+<form [formGroup]="formUserAdd.form">
+  <h1 class="uppercase">Đăng ký tài khoản</h1>
 
   <div class="input-group">
-    <label>Ho ten:</label>
+    <label>Họ tên:</label>
     <app-text-field 
-      (changeValueEventEmitter)="onChangeName($event)"
-      placeholder="Ho ten"
+      formControlName="username"
+      placeholder="Họ tên. Ví dụ: Nguyễn Văn A"
     >
     </app-text-field>
   </div>
   
   <div class="input-group">
-    <label>So dien thoai:</label>
+    <label>Số điện thoại:</label>
     <app-text-field 
-      (changeValueEventEmitter)="onChangePhoneNumber($event)"
-      placeholder="So dien thoai"
+      formControlName="phone"
+      placeholder="Số điện thoại. Ví dụ: 0912345678"
     >
     </app-text-field>
   </div>
   
   <div class="input-group">
     <label>Email:</label>
-    <app-text-field placeholder="Email"></app-text-field>
+    <app-text-field 
+      formControlName="email"
+      placeholder="Email. Ví dụ: tranbao@gmail.com"
+    ></app-text-field>
   </div>
   
   <div class="input-group">
-    <label>Ten tai khoan:</label>
+    <label>Tên tài khoản:</label>
     <app-text-field 
-      (changeValueEventEmitter)="onChangeUsername($event)"
-      placeholder="Ten tai khoan"
-    >
-    </app-text-field>
-    <p class="error">Email khong hop le. Vui long nhap lai</p>
-  </div>
-  
-  <div class="input-group">
-    <label>Mat khau:</label>
-    <app-text-field 
-      (changeValueEventEmitter)="onChangePassword($event)"
-      placeholder="Mat khau"
-    >
-    </app-text-field>
-    <p class="error">Email khong hop le. Vui long nhap lai</p>
-  </div>
-  
-  <div class="input-group">
-    <label>Xac nhan mat khau:</label>
-    <app-text-field 
-      (changeValueEventEmitter)="onChangeConfirmPassword($event)"
-      placeholder="Xac nhan mat khau"
+      formControlName="name"
+      placeholder="Tên tài khoản. Ví dụ: LeTrongNghia"
     >
     </app-text-field>
   </div>
   
   <div class="input-group">
-    <app-button label="Dang ky"></app-button>
+    <label>Mật khẩu:</label>
+    <app-text-field 
+      formControlName="password"
+      placeholder="Mật khẩu"
+    >
+    </app-text-field>
+  </div>
+  
+  <div class="input-group">
+    <label>Xác nhận mật khẩu:</label>
+    <app-text-field 
+      formControlName="confirmPassword"
+      placeholder="Xác nhận mật khẩu"
+    >
+    </app-text-field>
+  </div>
+  
+  <div 
+    class="input-group"
+    (click)="onRegister()" 
+  >
+    <app-button label="Đăng ký"></app-button>
   </div>
 </form>

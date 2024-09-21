@@ -1,9 +1,9 @@
 <form>
-  <h1>Dang ky tai khoan ABC</h1>
+  <h1 class="uppercase">Đăng ký tài khoản</h1>
 
   <div class="input-group">
     <label>
-      Nhap email de chung toi gui ma OTP ve email de dang ky tai khoan
+      Nhập email để nhận mã OTP mà chúng tôi sẽ gửi về để đăng ký tài khoản
     </label>
     <app-text-field
       (changeValueEventEmitter)="onChangeEmail($event)" 
@@ -11,12 +11,12 @@
     >
     </app-text-field>
     <p *ngIf="!onValidateEmail()" class="error">
-      Email khong hop le. Vui long nhap lai
+      Email phải bắt đầu bằng chữ cái, có ít nhất 1 ký tự và kết thúc với &#64;gmail.com
     </p>
   </div>
   
   <div class="input-group">
-    <app-button (click)="onClick()" label="Tiep tuc">
+    <app-button (click)="onClick()" label="Tiếp tục">
     </app-button>
   </div>
 </form>

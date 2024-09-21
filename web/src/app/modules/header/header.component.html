@@ -1,13 +1,19 @@
 <ul>
-  <li><a href="">Trang chu</a></li>
+  <li><a routerLink="" class="uppercase">Trang chủ</a></li>
   <li class="search">
-    <app-text-field placeholder="Tim kiem san pham">
+    <app-text-field placeholder="Tìm kiếm sản phẩm">
     </app-text-field>
   </li>
-  <li><a href="/login">
-    <svg-icon src="log-in.svg"></svg-icon>
-  </a></li>
-  <li><a href="/email-input">
-    <svg-icon src="user-plus.svg"></svg-icon>
-  </a></li>
+  <li><a routerLink="/login" class="uppercase">Đồ nam</a></li>
+  <li><a routerLink="/login" class="uppercase">Đồ nữ</a></li>
+  <li>
+    <a routerLink="/login">
+      <svg-icon src="log-in.svg"></svg-icon>
+    </a>
+  </li>
+  <li>
+    <a routerLink="/sign-up">
+      <svg-icon src="user-plus.svg"></svg-icon>
+    </a>
+  </li>
 </ul>

@@ -3,6 +3,9 @@ import { IApiConfig } from "../interfaces/api-config.interface";
 
 export const API_CONFIG: IApiConfig = {
   user: {
-    login: `${environment.url}/login`, 
-  }
+    login: `${environment.url}/api/login/`, 
+    getAll: `${environment.url}/api/accounts/`,
+    register: `${environment.url}/api/register/`,
+  }, 
+  sendOtp: `${environment.url}/api/send-otp/`, 
 }

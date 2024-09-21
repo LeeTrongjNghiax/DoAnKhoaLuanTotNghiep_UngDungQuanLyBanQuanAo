@@ -1,16 +1,19 @@
 <form>
-  <h1>Xac nhan ma OTP</h1>
+  <h1 class="uppercase">Xác nhận mã OTP</h1>
 
   <div class="input-group">
     <label>
-      Nhap ma OTP ma chung toi da gui ve dia chi email <span>{{ email }}</span> de xac nhan viec dang ky 
-      tai khoan ABC:
+      Nhập mã OTP mà chúng tôi đã gửi về địa chỉ email <span>{{ email }}</span>
+      để xác nhận việc đăng ký tài khoản
     </label>
-    <app-text-field placeholder="OTP"></app-text-field>
+    <app-text-field 
+      (changeValueEventEmitter)="onChangeOtp($event)"
+      placeholder="OTP"
+    ></app-text-field>
   </div>
   
   <div class="input-group">
-    <app-button (click)="onClick()" label="Tiep tuc"></app-button>
+    <app-button (click)="onSendOtp()" label="Tiếp tục"></app-button>
   </div>
 </form>
 

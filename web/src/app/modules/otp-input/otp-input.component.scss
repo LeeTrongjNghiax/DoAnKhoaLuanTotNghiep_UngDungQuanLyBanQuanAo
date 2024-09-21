@@ -1,8 +1,9 @@
 :host {
-  height: 70vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex: 1;
+  margin: var(--main-content-margin);
 
   form {
     width: 50vw;
