@@ -1,4 +1,4 @@
-<form [formGroup]="formOtpSignUpService.form">
+<form class="single-input-form" [formGroup]="formOtpSignUpService.form">
   <h1 class="uppercase">Xác nhận mã OTP</h1>
 
   <div class="input-group">
@@ -21,7 +21,7 @@
         formOtpSignUpService.form.controls['otp'].errors?.['required']
       "
     >
-      Otp không được để trống
+      OTP không được để trống
     </span>
   </div>
   

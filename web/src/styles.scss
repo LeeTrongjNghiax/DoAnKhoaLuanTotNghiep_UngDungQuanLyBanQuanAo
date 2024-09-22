@@ -43,3 +43,42 @@ svg-icon {
 
 html, body { height: 100%; }
 body { margin: 0 }
+
+app-email-input, 
+app-forgot-password-input, 
+app-login, 
+app-otp-input-to-reset-password, 
+app-otp-input-to-sign-up, 
+app-sign-up {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  margin: var(--main-content-margin);
+  
+  .single-input-form {
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 32px;
+    border-radius: var(--border-radius);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+    h1 {
+      font-weight: 600;
+    }
+
+    .input-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
+      label {
+        span {
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
