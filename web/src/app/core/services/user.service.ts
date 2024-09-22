@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpResponse } from '@angular/common/http';
 import { Inject, Injectable } from '@angular/core';
 import { IApiConfig } from '../../../interfaces/api-config.interface';
 import { API_CONFIG_TOKEN } from '../../../providers/api.provider';
@@ -10,6 +10,10 @@ import { IUserGetAllResponse } from '../../../interfaces/api/response/user-get-a
 import { IUserSendOtpResponse } from '../../../interfaces/api/response/user-send-otp-response';
 import { IUserRegisterResponse } from '../../../interfaces/api/response/user-register-response';
 import { IUserSendOtpParams } from '../../../interfaces/api/parameters/user-send-otp-params';
+import { IUserValidOtpParams } from '../../../interfaces/api/parameters/user-valid-otp-params';
+import { IUserValidOtpResponse } from '../../../interfaces/api/response/user-valid-otp-response';
+import { IUserChangePasswordParams } from '../../../interfaces/api/parameters/user-change-password-params';
+import { IUserChangePasswordResponse } from '../../../interfaces/api/response/user-change-password-response';
 
 @Injectable({
   providedIn: 'root'
@@ -32,15 +36,28 @@ export class UserService {
     )
   }
 
+  public register(params: IUserRegisterParams): Observable<IUserRegisterResponse> {
+    return this.http.post<IUserRegisterResponse>(
+      this.apiConfigToken.user.register, params
+    )
+  }
+
   public sendOtp(params: IUserSendOtpParams): Observable<IUserSendOtpResponse> {
     return this.http.post<IUserSendOtpResponse>(
       this.apiConfigToken.sendOtp, params
     )
   }
 
-  public register(params: IUserRegisterParams): Observable<IUserRegisterResponse> {
-    return this.http.post<IUserRegisterResponse>(
-      this.apiConfigToken.user.register, params
+  public validOtp(params: IUserValidOtpParams): Observable<IUserValidOtpResponse> {
+    return this.http.post<IUserValidOtpResponse>(
+      this.apiConfigToken.validOtp, params
+    )
+  }
+
+  public forgetPassword(params: IUserChangePasswordParams): 
+    Observable<IUserChangePasswordResponse> {
+    return this.http.post<IUserChangePasswordResponse>(
+      this.apiConfigToken.user.forgetPassword, params
     )
   }
 }

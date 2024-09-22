@@ -6,6 +6,8 @@ export const API_CONFIG: IApiConfig = {
     login: `${environment.url}/api/login/`, 
     getAll: `${environment.url}/api/accounts/`,
     register: `${environment.url}/api/register/`,
+    forgetPassword: `${environment.url}/api/forget-password/`,
   }, 
   sendOtp: `${environment.url}/api/send-otp/`, 
+  validOtp: `${environment.url}/api/valid-otp/`, 
 }

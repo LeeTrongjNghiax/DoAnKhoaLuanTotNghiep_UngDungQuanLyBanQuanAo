@@ -1,18 +1,41 @@
-<form>
-  <h1 class="uppercase">Đăng ký tài khoản</h1>
+<form [formGroup]="formUserForgotPassword.form">
+  <h1 class="uppercase">Quên mật khẩu</h1>
 
   <div class="input-group">
     <label>
-      Nhập email để nhận mã OTP mà chúng tôi sẽ gửi về để đăng ký tài khoản
+      Nhập email để nhận mã OTP mà chúng tôi sẽ gửi về để cập nhật mật khẩu
     </label>
     <app-text-field
-      (changeValueEventEmitter)="onChangeEmail($event)" 
+      formControlName="email"
       placeholder="Email"
     >
     </app-text-field>
-    <p *ngIf="!onValidateEmail()" class="error">
-      Email phải bắt đầu bằng chữ cái, có ít nhất 1 ký tự và kết thúc với &#64;gmail.com
-    </p>
+
+    <span 
+      class="error"
+      *ngIf="
+        formUserForgotPassword.form.controls['email'].touched &&
+        formUserForgotPassword.form.controls['email'].errors?.['required']
+      "
+    >
+      Email không được để trống
+    </span>
+    <span 
+      class="error"
+      *ngIf="
+        isFormSubmited && 
+        formUserForgotPassword.form.controls['email'].errors?.['pattern']
+      "
+    >
+      Email phải bắt đầu bằng chữ cái, không được chứa kí tự đặc biệt và kết thúc
+      bằng &#64;gmail.com
+    </span>
+  </div>
+
+  <div *ngIf="isError">
+    <span class="error">
+      {{ errorMessage }}
+    </span>
   </div>
   
   <div class="input-group">

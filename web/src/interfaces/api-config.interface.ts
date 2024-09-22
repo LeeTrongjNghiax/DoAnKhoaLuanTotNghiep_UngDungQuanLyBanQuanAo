@@ -3,6 +3,8 @@ export interface IApiConfig {
     login: string, 
     getAll: string, 
     register: string, 
+    forgetPassword: string, 
   }, 
-  sendOtp: string,  
+  sendOtp: string, 
+  validOtp: string, 
 }

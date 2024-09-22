@@ -30,6 +30,7 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnDestroy {
   public destroy = new Subject<void>();
+  public isLoginFail: boolean = false;
 
   public isDisable() {
     return this.formUserLogin.form.invalid;
@@ -50,6 +51,7 @@ export class LoginComponent implements OnDestroy {
   }
 
   private onLoginSuccess(res: IUserLoginResponse) {
+    this.isLoginFail = true;
     console.log(res);
     this.route.navigate(['']);
   }
@@ -57,7 +59,6 @@ export class LoginComponent implements OnDestroy {
   private onLoginFail(res: IUserLoginResponse) {
     console.log(res);
   }
-
 
   public constructor (
     public formUserLogin: FormUserLoginService, 

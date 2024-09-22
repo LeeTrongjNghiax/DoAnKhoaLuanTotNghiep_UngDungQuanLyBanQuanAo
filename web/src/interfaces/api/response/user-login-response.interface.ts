@@ -11,4 +11,5 @@ export interface IUserLoginResponse {
     birthday: Date, 
   }, 
   dataToken: string, 
+  status: number, 
 }

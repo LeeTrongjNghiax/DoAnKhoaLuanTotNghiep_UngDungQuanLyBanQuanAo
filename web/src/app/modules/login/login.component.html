@@ -37,7 +37,7 @@
     <app-checkbox-with-label label="Ghi nhớ tài khoản">
     </app-checkbox-with-label>
 
-    <app-link link="forgot-password" label="Quên mật khẩu?"></app-link>
+    <app-link link="email-input" label="Quên mật khẩu?"></app-link>
   </div>
   
   <div class="input-group">
@@ -49,6 +49,13 @@
     >
     </app-button>
   </div>
+
+  <div *ngIf="isLoginFail">
+    <span class="error">
+      Đăng nhập thất bại
+    </span>
+  </div>
+
   <div class="save-account-and-forgot-password-group">
     <p>Chưa có tài khoản? Đăng ký tại
       <app-link link="sign-up" label="đây"></app-link>
