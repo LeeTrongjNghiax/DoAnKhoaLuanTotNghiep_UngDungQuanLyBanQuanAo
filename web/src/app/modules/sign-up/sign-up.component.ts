@@ -19,12 +19,12 @@ import { HttpResponse } from '@angular/common/http';
   standalone: true,
   imports: [
     CommonModule,
-    TTextFieldComponent,
-    TButtonComponent,
     ReactiveFormsModule,
+    ObjectHasPropertyPipe, 
+    TButtonComponent,
     TPasswordFieldComponent,
-    ObjectHasPropertyPipe
-],
+    TTextFieldComponent,
+  ],
   templateUrl: './sign-up.component.html',
   styleUrl: './sign-up.component.scss'
 })

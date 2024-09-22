@@ -19,8 +19,8 @@ import { HttpResponse } from '@angular/common/http';
   imports: [
     CommonModule,   
     ReactiveFormsModule, 
-    TTextFieldComponent, 
     TButtonComponent, 
+    TTextFieldComponent, 
   ],
   templateUrl: './otp-input-to-sign-up.component.html',
   styleUrl: './otp-input-to-sign-up.component.scss'

@@ -15,7 +15,7 @@ import { HttpResponse } from '@angular/common/http';
 @Component({
   selector: 'app-otp-input-to-reset-password',
   standalone: true,
-  imports: [TTextFieldComponent, TButtonComponent, ReactiveFormsModule],
+  imports: [ReactiveFormsModule, TTextFieldComponent, TButtonComponent, ],
   templateUrl: './otp-input-to-reset-password.component.html',
   styleUrl: './otp-input-to-reset-password.component.scss'
 })

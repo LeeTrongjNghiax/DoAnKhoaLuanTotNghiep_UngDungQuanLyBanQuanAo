@@ -20,13 +20,13 @@ import { TTextFieldComponent } from '../../shared/components/text-field/text-fie
   standalone: true,
   imports: [
     CommonModule,
-    TTextFieldComponent,
+    ReactiveFormsModule,
     TButtonComponent,
     TCheckboxWithLabelComponent,
     TLinkComponent,
-    ReactiveFormsModule,
-    TPasswordFieldComponent
-],
+    TPasswordFieldComponent, 
+    TTextFieldComponent,
+  ],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'
 })

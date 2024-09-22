@@ -1,12 +1,13 @@
+import { HttpClient, HttpErrorResponse, HttpResponse } from '@angular/common/http';
 import { Inject, Injectable } from '@angular/core';
+import { catchError, Observable, ObservableInput, throwError } from 'rxjs';
+
 import { IUserValidOtpParams } from '../interfaces/api/parameters/user-valid-otp-params';
 import { IUserValidOtpResponse } from '../interfaces/api/response/user-valid-otp-response';
-import { HttpClient, HttpErrorResponse, HttpResponse } from '@angular/common/http';
-import { API_CONFIG_TOKEN } from '../../../providers/api.provider';
 import { IApiConfig } from '../../../interfaces/api-config.interface';
-import { catchError, Observable, ObservableInput, throwError } from 'rxjs';
 import { IUserSendOtpParams } from '../interfaces/api/parameters/user-send-otp-params';
 import { IUserSendOtpResponse } from '../interfaces/api/response/user-send-otp-response';
+import { API_CONFIG_TOKEN } from '../../../providers/api.provider';
 
 @Injectable({
   providedIn: 'root'

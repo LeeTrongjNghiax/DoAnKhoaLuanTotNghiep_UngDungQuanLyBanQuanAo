@@ -18,9 +18,9 @@ import { HttpResponse } from '@angular/common/http';
   standalone: true,
   imports: [
     CommonModule, 
-    TTextFieldComponent, 
+    ReactiveFormsModule, 
     TButtonComponent, 
-    ReactiveFormsModule
+    TTextFieldComponent, 
   ],
   templateUrl: './forgot-password-input.component.html',
   styleUrl: './forgot-password-input.component.scss'

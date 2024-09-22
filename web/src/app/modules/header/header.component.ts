@@ -8,12 +8,7 @@ import { TTextFieldComponent } from '../../shared/components/text-field/text-fie
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [
-    TTextFieldComponent, 
-    TLinkComponent, 
-    AngularSvgIconModule, 
-    RouterLink
-  ],
+  imports: [AngularSvgIconModule, RouterLink, TLinkComponent, TTextFieldComponent],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
