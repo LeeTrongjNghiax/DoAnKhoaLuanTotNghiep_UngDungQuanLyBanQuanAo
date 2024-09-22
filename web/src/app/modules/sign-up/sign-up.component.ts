@@ -1,16 +1,18 @@
-import { Component, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TTextFieldComponent } from '../../shared/components/text-field/text-field.component';
-import { TButtonComponent } from '../../shared/components/button/button.component';
-import { Subject, takeUntil } from 'rxjs';
-import { UserService } from '../../core/services/user.service';
+import { Component, OnDestroy } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
-import { FormUserAddService } from '../../core/services/form-user-add.service';
 import { Router } from '@angular/router';
-import { IUserSendOtpParams } from '../../../interfaces/api/parameters/user-send-otp-params';
-import { IUserSendOtpResponse } from '../../../interfaces/api/response/user-send-otp-response';
+import { Subject, takeUntil } from 'rxjs';
+
+import { FormUserSignUpService } from './services/form-user-sign-up.service';
+import { IUserSendOtpParams } from '../../core/interfaces/api/parameters/user-send-otp-params';
+import { IUserSendOtpResponse } from '../../core/interfaces/api/response/user-send-otp-response';
+import { OtpService } from '../../core/services/otp.service';
+import { TButtonComponent } from '../../shared/components/button/button.component';
 import { TPasswordFieldComponent } from "../../shared/components/password-field/password-field.component";
+import { TTextFieldComponent } from '../../shared/components/text-field/text-field.component';
 import { ObjectHasPropertyPipe } from '../../shared/pipes/object-has-property.pipe';
+import { HttpResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-sign-up',
@@ -33,38 +35,40 @@ export class SignUpComponent implements OnDestroy {
   public onRegister() {
     this.isFormSubmited = true;
 
-    if (!this.formUserAdd.form.valid) {
-      this.formUserAdd.form.markAllAsTouched();
+    if (!this.formUserSignUpService.form.valid) {
+      this.formUserSignUpService.form.markAllAsTouched();
       return;
     }
 
     const params: IUserSendOtpParams = {
-      email: this.formUserAdd.form.value.email || ''
+      email: this.formUserSignUpService.form.value.email || ''
     }
 
-    this.userService.sendOtp(params)
+    this.otpService.sendOtp(params)
       .pipe(takeUntil(this.destroy))
       .subscribe(
-        (response: IUserSendOtpResponse) => this.onSendOtpSuccess(response), 
-        (response: IUserSendOtpResponse) => this.onSendOtpFail(response), 
+        (response: HttpResponse<IUserSendOtpResponse>) => 
+          this.onSendOtpSuccess(response), 
+        (response: HttpResponse<IUserSendOtpResponse>) => 
+          this.onSendOtpFail(response), 
       )
   }
 
-  private onSendOtpSuccess(res: IUserSendOtpResponse) {
+  private onSendOtpSuccess(res: HttpResponse<IUserSendOtpResponse>) {
     console.log(res);
     this.router.navigate(
-      [`/otp-input`, { email: this.formUserAdd.form.value.email }], 
+      [`/otp-input-to-sign-up`, { email: this.formUserSignUpService.form.value.email }], 
     );
   }
 
-  private onSendOtpFail(res: IUserSendOtpResponse) {
+  private onSendOtpFail(res: HttpResponse<IUserSendOtpResponse>) {
     console.log(res);
   }
 
   public constructor (
     private router: Router, 
-    private userService: UserService, 
-    public formUserAdd: FormUserAddService
+    private otpService: OtpService, 
+    public formUserSignUpService: FormUserSignUpService
   ) {}
 
   public ngOnDestroy(): void {

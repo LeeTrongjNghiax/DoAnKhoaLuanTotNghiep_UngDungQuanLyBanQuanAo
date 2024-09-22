@@ -4,7 +4,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 @Injectable({
   providedIn: 'root'
 })
-export class FormUserChangePasswordService {
+export class FormUserForgotPasswordService {
   readonly form = new FormGroup({
     password: new FormControl('', [
       Validators.required, 

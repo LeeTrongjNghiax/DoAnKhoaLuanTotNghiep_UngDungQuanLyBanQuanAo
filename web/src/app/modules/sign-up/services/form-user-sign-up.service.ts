@@ -4,7 +4,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 @Injectable({
   providedIn: 'root'
 })
-export class FormUserAddService {
+export class FormUserSignUpService {
   readonly form = new FormGroup({
     name: new FormControl('', [
       Validators.required, 

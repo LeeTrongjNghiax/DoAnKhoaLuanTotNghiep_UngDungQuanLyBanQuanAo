@@ -1,66 +1,75 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { Subject, takeUntil } from 'rxjs';
-import { FormUserChangePasswordService } from '../../core/services/form-user-change-password.service';
-import { Router } from '@angular/router';
-import { UserService } from '../../core/services/user.service';
-import { IUserChangePasswordParams } from '../../../interfaces/api/parameters/user-change-password-params';
-import { FormUserForgotPasswordService } from '../../core/services/form-user-forgot-password.service';
-import { IUserChangePasswordResponse } from '../../../interfaces/api/response/user-change-password-response';
-import { TTextFieldComponent } from '../../shared/components/text-field/text-field.component';
-import { TButtonComponent } from '../../shared/components/button/button.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
+import { Subject, takeUntil } from 'rxjs';
+
+import { FormUserForgotPasswordService } from './services/form-user-forgot-password.service';
+import { FormOtpForgotPasswordService } from '../email-input/services/form-otp-forgot-password.service';
+import { IUserChangePasswordParams } from '../../core/interfaces/api/parameters/user-change-password-params';
+import { IUserChangePasswordResponse } from '../../core/interfaces/api/response/user-change-password-response';
+import { UserService } from '../../core/services/user.service';
+import { TButtonComponent } from '../../shared/components/button/button.component';
+import { TTextFieldComponent } from '../../shared/components/text-field/text-field.component';
+import { HttpResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-forgot-password-input',
   standalone: true,
-  imports: [TTextFieldComponent, TButtonComponent, ReactiveFormsModule],
+  imports: [
+    CommonModule, 
+    TTextFieldComponent, 
+    TButtonComponent, 
+    ReactiveFormsModule
+  ],
   templateUrl: './forgot-password-input.component.html',
   styleUrl: './forgot-password-input.component.scss'
 })
 export class ForgotPasswordInputComponent {
   public destroy = new Subject<void>();
-  public isLoginFail: boolean = false;
-
-  public isDisable() {
-    return this.formUserChangePassword.form.invalid;
-  }
+  public isFormSubmited: boolean = false;
 
   public onChangePassword() {
+    this.isFormSubmited = true;
+
+    if (!this.formUserForgotPasswordService.form.valid) {
+      this.formUserForgotPasswordService.form.markAllAsTouched();
+      return;
+    }
+
     const params: IUserChangePasswordParams = {
-      email: this.formUserForgotPassword.form.value.email || '', 
-      password: this.formUserChangePassword.form.value.password || '', 
+      email: this.formOtpForgotPasswordService.form.value.email || '', 
+      password: this.formUserForgotPasswordService.form.value.password || '', 
     }
 
     this.userService.forgetPassword(params)
       .pipe(takeUntil(this.destroy))
       .subscribe(
-        (response: IUserChangePasswordResponse) => 
+        (response: HttpResponse<IUserChangePasswordResponse>) => 
           this.onChangePasswordSuccess(response), 
-        (response: IUserChangePasswordResponse) => 
+        (response: HttpResponse<IUserChangePasswordResponse>) => 
           this.onChangePasswordFail(response), 
       );
   }
 
-  private onChangePasswordSuccess(res: IUserChangePasswordResponse) {
+  private onChangePasswordSuccess(res: HttpResponse<IUserChangePasswordResponse>) {
     console.log(res);
     this.route.navigate(['']);
   }
 
-  private onChangePasswordFail(res: IUserChangePasswordResponse) {
+  private onChangePasswordFail(res: HttpResponse<IUserChangePasswordResponse>) {
     console.log(res);
   }
 
   public constructor (
-    public formUserChangePassword: FormUserChangePasswordService, 
-    public formUserForgotPassword: FormUserForgotPasswordService, 
     private route: Router, 
     private userService: UserService, 
+    private formOtpForgotPasswordService: FormOtpForgotPasswordService, 
+    public formUserForgotPasswordService: FormUserForgotPasswordService, 
   ) {}
 
   public ngOnDestroy(): void {
     this.destroy.next();
     this.destroy.complete();
-
-    this.formUserChangePassword.clearForm();
   }
 }

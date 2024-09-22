@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { FormUserAddService } from './form-user-add.service';
+import { OtpService } from './otp.service';
 
-describe('FormUserAddService', () => {
-  let service: FormUserAddService;
+describe('OtpService', () => {
+  let service: OtpService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(FormUserAddService);
+    service = TestBed.inject(OtpService);
   });
 
   it('should be created', () => {

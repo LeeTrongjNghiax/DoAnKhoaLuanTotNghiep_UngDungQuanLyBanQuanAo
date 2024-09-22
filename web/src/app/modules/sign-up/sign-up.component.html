@@ -1,4 +1,4 @@
-<form [formGroup]="formUserAdd.form">
+<form [formGroup]="formUserSignUpService.form">
   <h1 class="uppercase">Đăng ký tài khoản</h1>
 
   <div class="input-group">
@@ -7,7 +7,7 @@
       <span 
         class="error"
         *ngIf="
-          formUserAdd.form.controls['phone'].errors | 
+          formUserSignUpService.form.controls['phone'].errors | 
           objectHasProperty: 'required'
         "
       >*</span>
@@ -22,8 +22,8 @@
     <span 
       class="error"
       *ngIf="
-        formUserAdd.form.controls['phone'].touched &&
-        formUserAdd.form.controls['phone'].errors?.['required']
+        formUserSignUpService.form.controls['phone'].touched &&
+        formUserSignUpService.form.controls['phone'].errors?.['required']
       "
     >
       Số điện thoại không được để trống
@@ -32,7 +32,7 @@
       class="error"
       *ngIf="
         isFormSubmited && 
-        formUserAdd.form.controls['phone'].errors?.['pattern']
+        formUserSignUpService.form.controls['phone'].errors?.['pattern']
       "
     >
       Số điện thoại phải có 10 chữ số và bắt đầu bằng số 0
@@ -45,7 +45,7 @@
       <span 
         class="error"
         *ngIf="
-          formUserAdd.form.controls['email'].errors | 
+          formUserSignUpService.form.controls['email'].errors | 
           objectHasProperty: 'required'
         "
       >*</span>
@@ -58,8 +58,8 @@
    <span 
       class="error"
       *ngIf="
-        formUserAdd.form.controls['email'].touched &&
-        formUserAdd.form.controls['email'].errors?.['required']
+        formUserSignUpService.form.controls['email'].touched &&
+        formUserSignUpService.form.controls['email'].errors?.['required']
       "
     >
       Email không được để trống
@@ -68,7 +68,7 @@
       class="error"
       *ngIf="
         isFormSubmited && 
-        formUserAdd.form.controls['email'].errors?.['pattern']
+        formUserSignUpService.form.controls['email'].errors?.['pattern']
       "
     >
       Email phải bắt đầu bằng chữ cái, không được chứa kí tự đặc biệt và kết thúc
@@ -82,7 +82,7 @@
       <span 
         class="error"
         *ngIf="
-          formUserAdd.form.controls['name'].errors | 
+          formUserSignUpService.form.controls['name'].errors | 
           objectHasProperty: 'required'
         "
       >*</span>
@@ -96,8 +96,8 @@
     <span 
       class="error"
       *ngIf="
-        formUserAdd.form.controls['name'].touched &&
-        formUserAdd.form.controls['name'].errors?.['required']
+        formUserSignUpService.form.controls['name'].touched &&
+        formUserSignUpService.form.controls['name'].errors?.['required']
       "
     >
       Tên tài khoản không được để trống
@@ -106,7 +106,7 @@
       class="error"
       *ngIf="
         isFormSubmited && 
-        formUserAdd.form.controls['name'].errors?.['pattern']
+        formUserSignUpService.form.controls['name'].errors?.['pattern']
       "
     >
       Tên phải bắt đầu bằng chữ cái và không được chứa kí tự đặc biệt
@@ -119,7 +119,7 @@
       <span 
         class="error"
         *ngIf="
-          formUserAdd.form.controls['password'].errors | 
+          formUserSignUpService.form.controls['password'].errors | 
           objectHasProperty: 'required'
         "
       >*</span>
@@ -133,8 +133,8 @@
     <span 
       class="error"
       *ngIf="
-        formUserAdd.form.controls['password'].touched &&
-        formUserAdd.form.controls['password'].errors?.['required']
+        formUserSignUpService.form.controls['password'].touched &&
+        formUserSignUpService.form.controls['password'].errors?.['required']
       "
     >
       Mật khẩu không được để trống
@@ -143,7 +143,7 @@
       class="error"
       *ngIf="
         isFormSubmited && 
-        formUserAdd.form.controls['password'].errors?.['pattern']
+        formUserSignUpService.form.controls['password'].errors?.['pattern']
       "
     >
       Mật khẩu phải dài ít nhất 8 kí tự
@@ -156,7 +156,7 @@
       <span 
         class="error"
         *ngIf="
-          formUserAdd.form.controls['confirmPassword'].errors | 
+          formUserSignUpService.form.controls['confirmPassword'].errors | 
           objectHasProperty: 'required'
         "
       >*</span>
@@ -170,8 +170,8 @@
     <span 
       class="error"
       *ngIf="
-        formUserAdd.form.controls['confirmPassword'].value !==
-        formUserAdd.form.controls['confirmPassword'].value
+        formUserSignUpService.form.controls['confirmPassword'].value !==
+        formUserSignUpService.form.controls['confirmPassword'].value
       "
     >
       Xác nhận mật khẩu phải giống với mật khẩu

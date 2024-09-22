@@ -1,4 +1,4 @@
-import { EUserGender } from "../../../enums/user-gender.enum";
+import { EUserGender } from "../../../../../enums/user-gender.enum";
 
 export interface IUserLoginResponse {
   dataUser: {

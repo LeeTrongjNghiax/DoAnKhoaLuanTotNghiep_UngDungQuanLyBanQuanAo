@@ -1,4 +1,4 @@
-<form [formGroup]="formUserForgotPassword.form">
+<form [formGroup]="formOtpForgotPasswordService.form">
   <h1 class="uppercase">Quên mật khẩu</h1>
 
   <div class="input-group">
@@ -14,8 +14,8 @@
     <span 
       class="error"
       *ngIf="
-        formUserForgotPassword.form.controls['email'].touched &&
-        formUserForgotPassword.form.controls['email'].errors?.['required']
+        formOtpForgotPasswordService.form.controls['email'].touched &&
+        formOtpForgotPasswordService.form.controls['email'].errors?.['required']
       "
     >
       Email không được để trống
@@ -24,7 +24,7 @@
       class="error"
       *ngIf="
         isFormSubmited && 
-        formUserForgotPassword.form.controls['email'].errors?.['pattern']
+        formOtpForgotPasswordService.form.controls['email'].errors?.['pattern']
       "
     >
       Email phải bắt đầu bằng chữ cái, không được chứa kí tự đặc biệt và kết thúc
