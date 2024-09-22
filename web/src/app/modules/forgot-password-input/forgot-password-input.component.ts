@@ -64,7 +64,7 @@ export class ForgotPasswordInputComponent {
   public constructor (
     private route: Router, 
     private userService: UserService, 
-    private formOtpForgotPasswordService: FormOtpForgotPasswordService, 
+    public formOtpForgotPasswordService: FormOtpForgotPasswordService, 
     public formUserForgotPasswordService: FormUserForgotPasswordService, 
   ) {}
 

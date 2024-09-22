@@ -3,34 +3,38 @@
 
   <div class="input-group">
     <label>Tên tài khoản:</label>
+
     <app-text-field 
       formControlName="username"
       placeholder="Tên tài khoản. Ví dụ: LongNguyen"
     >
     </app-text-field>
-    <div *ngIf="formUserLoginService.form.controls['username'].touched">
-      <span 
-        *ngIf="formUserLoginService.form.controls['username'].errors?.['required']" 
-        class="error"
-      >
-        Tên tài khoản không được để trống
-      </span>
-    </div>
+
+    <span 
+      *ngIf="
+        formUserLoginService.form.controls['username'].touched &&
+        formUserLoginService.form.controls['username'].errors?.['required']" 
+      class="error"
+    >
+      Tên tài khoản không được để trống
+    </span>
   </div>
   
   <div class="input-group">
     <label>Mật khẩu:</label>
+
     <app-password-field formControlName="password" placeholder="Mật khẩu">
     </app-password-field>
 
-    <div *ngIf="formUserLoginService.form.controls['password'].touched">
-      <span 
-        class="error"
-        *ngIf="formUserLoginService.form.controls['password'].errors?.['required']"
-      >
-        Mật khẩu không được để trống
-      </span>
-    </div>
+    <span 
+      class="error"
+      *ngIf="
+        formUserLoginService.form.controls['password'].touched &&
+        formUserLoginService.form.controls['password'].errors?.['required']
+      "
+    >
+      Mật khẩu không được để trống
+    </span>
   </div>
 
   <div class="save-account-and-forgot-password-group">

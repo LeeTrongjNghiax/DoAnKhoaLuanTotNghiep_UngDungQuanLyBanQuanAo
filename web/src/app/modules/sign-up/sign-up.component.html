@@ -50,12 +50,14 @@
         "
       >*</span>
     </label>
+
     <app-text-field 
       formControlName="email"
       placeholder="Email. Ví dụ: tranbao@gmail.com"
-    ></app-text-field>
+    >
+    </app-text-field>
 
-   <span 
+    <span 
       class="error"
       *ngIf="
         formUserSignUpService.form.controls['email'].touched &&
@@ -64,6 +66,7 @@
     >
       Email không được để trống
     </span>
+
     <span 
       class="error"
       *ngIf="
@@ -87,6 +90,7 @@
         "
       >*</span>
     </label>
+
     <app-text-field 
       formControlName="name"
       placeholder="Tên tài khoản. Ví dụ: LeTrongNghia"
@@ -102,6 +106,7 @@
     >
       Tên tài khoản không được để trống
     </span>
+
     <span 
       class="error"
       *ngIf="
@@ -124,6 +129,7 @@
         "
       >*</span>
     </label>
+
     <app-password-field
       formControlName="password"
       placeholder="Mật khẩu"
@@ -139,6 +145,7 @@
     >
       Mật khẩu không được để trống
     </span>
+
     <span 
       class="error"
       *ngIf="
@@ -161,6 +168,7 @@
         "
       >*</span>
     </label>
+
     <app-password-field
       formControlName="confirmPassword"
       placeholder="Xác nhận mật khẩu"

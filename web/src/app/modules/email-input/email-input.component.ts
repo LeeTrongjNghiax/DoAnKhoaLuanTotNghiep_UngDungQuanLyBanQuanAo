@@ -27,8 +27,6 @@ import { TButtonComponent } from '../../shared/components/button/button.componen
 export class EmailInputComponent implements OnDestroy {
   public destroy = new Subject<void>();
   public isFormSubmited: boolean = false;
-  public isError: boolean = false;
-  public errorMessage: string = '';
 
   public onClick() {
     this.isFormSubmited = true;
@@ -53,7 +51,7 @@ export class EmailInputComponent implements OnDestroy {
   }
 
   private onSendOtpSuccess(res: HttpResponse<IUserSendOtpResponse>) {
-    console.log(res.status);
+    console.log(res);
 
     if (res.status === 200) {
       this.router.navigate(
@@ -62,8 +60,6 @@ export class EmailInputComponent implements OnDestroy {
         }], 
       );
     } else {
-      this.isError = true;
-      // this.errorMessage = res.status;
     }
   }
 

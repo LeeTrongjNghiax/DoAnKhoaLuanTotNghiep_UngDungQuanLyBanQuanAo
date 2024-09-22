@@ -5,6 +5,7 @@
     <label>
       Nhập email để nhận mã OTP mà chúng tôi sẽ gửi về để cập nhật mật khẩu
     </label>
+
     <app-text-field
       formControlName="email"
       placeholder="Email"
@@ -20,6 +21,7 @@
     >
       Email không được để trống
     </span>
+
     <span 
       class="error"
       *ngIf="
@@ -32,12 +34,6 @@
     </span>
   </div>
 
-  <div *ngIf="isError">
-    <span class="error">
-      {{ errorMessage }}
-    </span>
-  </div>
-  
   <div class="input-group">
     <app-button (click)="onClick()" label="Tiếp tục">
     </app-button>

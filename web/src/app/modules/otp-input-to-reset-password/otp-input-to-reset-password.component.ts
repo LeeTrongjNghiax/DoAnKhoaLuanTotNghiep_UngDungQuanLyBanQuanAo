@@ -1,6 +1,6 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { Subject, takeUntil } from 'rxjs';
 
 import { FormOtpForgotPasswordOtpService } from './services/form-otp-forgot-password-otp.service';
@@ -19,9 +19,8 @@ import { HttpResponse } from '@angular/common/http';
   templateUrl: './otp-input-to-reset-password.component.html',
   styleUrl: './otp-input-to-reset-password.component.scss'
 })
-export class OtpInputToResetPasswordComponent implements OnInit, OnDestroy {
+export class OtpInputToResetPasswordComponent implements OnDestroy {
   public destroy = new Subject<void>();
-  public email: string | null = '';
   public isFormSubmited: boolean = false;
 
   public onSendOtp() {
@@ -57,16 +56,11 @@ export class OtpInputToResetPasswordComponent implements OnInit, OnDestroy {
   }
 
   public constructor(
-    private activeRoute: ActivatedRoute, 
     private route: Router, 
     private otpService: OtpService, 
-    private formOtpForgotPasswordService: FormOtpForgotPasswordService, 
+    public formOtpForgotPasswordService: FormOtpForgotPasswordService, 
     public formOtpForgotPasswordOtpService: FormOtpForgotPasswordOtpService
   ) {}
-
-  public ngOnInit(): void {
-    this.email = this.activeRoute.snapshot.paramMap.get("email");
-  }
 
   public ngOnDestroy(): void {
     this.destroy.next();
