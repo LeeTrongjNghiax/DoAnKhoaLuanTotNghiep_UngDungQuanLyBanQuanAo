@@ -12,4 +12,5 @@ export interface IUserLoginResponse {
   }, 
   dataToken: string, 
   status: number, 
+  mess?: string, 
 }

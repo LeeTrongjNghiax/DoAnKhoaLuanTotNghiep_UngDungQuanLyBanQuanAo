@@ -21,22 +21,22 @@ export class UserService {
     return this.http.post<IUserRegisterResponse>(
       this.apiConfigToken.user.register, params, { observe: 'response' }
     )
-      .pipe(catchError(this.errorHandler))
   }
 
   public login(params: IUserLoginParams): 
     Observable<HttpResponse<IUserLoginResponse>> {
     return this.http.post<IUserLoginResponse>(
-      this.apiConfigToken.user.login, params, { observe: 'response' }
+      this.apiConfigToken.user.login, params, { 
+        observe: 'response', 
+        // withCredentials: true
+      }
     )
-      .pipe(catchError(this.errorHandler))
   }
 
   public get(): Observable<HttpResponse<IUserGetAllResponse>> {
     return this.http.get<IUserGetAllResponse>(
       this.apiConfigToken.user.getAll, { observe: 'response' }
     )
-      .pipe(catchError(this.errorHandler))
   }
 
   public forgetPassword(params: IUserChangePasswordParams): 
@@ -44,7 +44,6 @@ export class UserService {
     return this.http.post<IUserChangePasswordResponse>(
       this.apiConfigToken.user.forgetPassword, params, { observe: 'response' }
     )
-      .pipe(catchError(this.errorHandler))
   }
 
   private errorHandler(error: HttpErrorResponse): ObservableInput<any> {

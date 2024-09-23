@@ -3,9 +3,11 @@
   nzType="primary" 
   nzSize="large" 
   nzBlock="true" 
+  [nzLoading]="isLoading"
   [disabled]="isDisabled"
 >
-  <svg-icon *ngIf="iconName" src="/{{ iconName }}.svg"></svg-icon>
-  {{ label }}
+  <ng-container *ngIf="!isLoading">
+    <svg-icon *ngIf="iconName" src="/{{ iconName }}.svg"></svg-icon>
+    {{ label }}
+  </ng-container>
 </button>
-

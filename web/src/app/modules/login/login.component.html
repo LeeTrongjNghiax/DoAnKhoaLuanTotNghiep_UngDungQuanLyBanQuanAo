@@ -47,6 +47,7 @@
   <div class="input-group">
     <app-button 
       [isDisabled]="isDisable()"
+      [isLoading]="false"
       (click)="onClickLogIn()" 
       iconName="log-in" 
       label="Đăng nhập"
@@ -54,10 +55,8 @@
     </app-button>
   </div>
 
-  <div *ngIf="isLoginFail">
-    <span class="error">
-      Đăng nhập thất bại
-    </span>
+  <div *ngIf="errorMessage">
+    <span class="error">{{ errorMessage }}</span>
   </div>
 
   <div class="save-account-and-forgot-password-group">

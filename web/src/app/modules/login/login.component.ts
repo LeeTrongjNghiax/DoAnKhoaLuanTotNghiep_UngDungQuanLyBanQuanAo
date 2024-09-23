@@ -14,6 +14,8 @@ import { TCheckboxWithLabelComponent } from '../../shared/components/checkbox-wi
 import { TLinkComponent } from '../../shared/components/link/link.component';
 import { TPasswordFieldComponent } from '../../shared/components/password-field/password-field.component';
 import { TTextFieldComponent } from '../../shared/components/text-field/text-field.component';
+import { EHttpResponseCode } from '../../core/enums/http-response-code';
+import { NzNotificationService } from 'ng-zorro-antd/notification';
 
 @Component({
   selector: 'app-login',
@@ -32,8 +34,9 @@ import { TTextFieldComponent } from '../../shared/components/text-field/text-fie
 })
 export class LoginComponent implements OnDestroy {
   public destroy = new Subject<void>();
-  public isLoginFail: boolean = false;
   public isFormSubmited: boolean = false;
+  public errorMessage: string = '';
+  public isLoading: boolean = false;
 
   public isDisable() {
     return this.formUserLoginService.form.invalid;
@@ -41,6 +44,8 @@ export class LoginComponent implements OnDestroy {
 
   public onClickLogIn() {
     this.isFormSubmited = true;
+    this.errorMessage = '';
+    this.isLoading = true;
 
     if (!this.formUserLoginService.form.valid) {
       this.formUserLoginService.form.markAllAsTouched();
@@ -63,18 +68,41 @@ export class LoginComponent implements OnDestroy {
   }
 
   private onLoginSuccess(res: HttpResponse<IUserLoginResponse>) {
-    this.isLoginFail = true;
+    this.isLoading = false;
+    switch (res.status) {
+      case EHttpResponseCode.OK:
+        if (res.body?.mess === 'Login Fail') {
+          console.log("1");
+          this.errorMessage = 'Tên tài khoản hoặc mật khẩu không đúng'
+        } else {
+          console.log("2");
+          this.notificationService.success(
+            '', 
+            'Login successfully!', 
+            { nzPlacement: 'topRight' }
+          )
+          this.route.navigate(['']);
+        }
+        break;
+      case EHttpResponseCode.INTERNAL_SERVER_ERROR:
+        this.errorMessage = res.statusText
+        break;
+      default:
+        break;
+    }
+
     console.log(res);
-    this.route.navigate(['']);
   }
 
   private onLoginFail(res: HttpResponse<IUserLoginResponse>) {
+    this.isLoading = false;
     console.log(res);
   }
 
   public constructor (
     private route: Router, 
     private userService: UserService, 
+    private notificationService: NzNotificationService, 
     public formUserLoginService: FormUserLoginService, 
   ) {}
 
