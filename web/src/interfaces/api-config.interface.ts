@@ -5,6 +5,10 @@ export interface IApiConfig {
     register: string, 
     forgetPassword: string, 
   }, 
+  product: {
+    get: string, 
+    getByBarcode: string, 
+  }, 
   sendOtp: string, 
   validOtp: string, 
 }

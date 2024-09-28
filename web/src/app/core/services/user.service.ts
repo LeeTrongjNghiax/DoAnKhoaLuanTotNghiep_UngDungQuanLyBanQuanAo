@@ -35,22 +35,23 @@ export class UserService {
 
   public get(): Observable<HttpResponse<IUserGetAllResponse>> {
     return this.http.get<IUserGetAllResponse>(
-      this.apiConfigToken.user.getAll, { observe: 'response' }
+      this.apiConfigToken.user.getAll, { 
+        observe: 'response', 
+        // withCredentials: true
+      }
     )
   }
 
   public forgetPassword(params: IUserChangePasswordParams): 
     Observable<HttpResponse<IUserChangePasswordResponse>> {
     return this.http.post<IUserChangePasswordResponse>(
-      this.apiConfigToken.user.forgetPassword, params, { observe: 'response' }
+      this.apiConfigToken.user.forgetPassword, params, { 
+        observe: 'response', 
+        // withCredentials: true
+      }
     )
   }
 
-  private errorHandler(error: HttpErrorResponse): ObservableInput<any> {
-    console.log(error);
-    return throwError(`Error: ${error.message}`)
-  }
-  
   constructor(
     private http: HttpClient, 
     @Inject(API_CONFIG_TOKEN) private apiConfigToken: IApiConfig

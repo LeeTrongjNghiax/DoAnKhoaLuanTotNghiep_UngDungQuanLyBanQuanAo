@@ -1,3 +1,3 @@
 export interface IHttpResponse {
-  mess: string, 
+  mess?: string, 
 }

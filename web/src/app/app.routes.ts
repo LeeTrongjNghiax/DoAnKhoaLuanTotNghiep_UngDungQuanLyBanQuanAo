@@ -7,6 +7,7 @@ import { EmailInputComponent } from './modules/email-input/email-input.component
 import { OtpInputToResetPasswordComponent } from './modules/otp-input-to-reset-password/otp-input-to-reset-password.component';
 import { ForgotPasswordInputComponent } from './modules/forgot-password-input/forgot-password-input.component';
 import { OtpInputToSignUpComponent } from './modules/otp-input-to-sign-up/otp-input-to-sign-up.component';
+import { ProductItemDetailComponent } from './modules/landing/components/product-item/components/product-item-detail/product-item-detail.component';
 
 export const routes: Routes = [
   {
@@ -36,5 +37,9 @@ export const routes: Routes = [
   {
     path: '', 
     component: LandingComponent, 
+  }, 
+  {
+    path: 'product-item-detail/:id', 
+    component: ProductItemDetailComponent, 
   }
 ];

@@ -18,7 +18,7 @@ export class OtpService {
     return this.http.post<IUserSendOtpResponse>(
       this.apiConfigToken.sendOtp, params, { observe: 'response' }
     )
-      .pipe(catchError(this.errorHandler))
+      // .pipe(catchError(this.errorHandler))
   }
 
   public validOtp(params: IUserValidOtpParams): 
@@ -26,7 +26,7 @@ export class OtpService {
     return this.http.post<IUserValidOtpResponse>(
       this.apiConfigToken.validOtp, params, { observe: 'response' }
     )
-      .pipe(catchError(this.errorHandler))
+      // .pipe(catchError(this.errorHandler))
   }
 
   private errorHandler(error: HttpErrorResponse): ObservableInput<any> {

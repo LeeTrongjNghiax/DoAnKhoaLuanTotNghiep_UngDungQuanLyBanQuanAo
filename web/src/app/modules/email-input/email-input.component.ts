@@ -51,7 +51,8 @@ export class EmailInputComponent implements OnDestroy {
   }
 
   private onSendOtpSuccess(res: HttpResponse<IUserSendOtpResponse>) {
-    console.log(res);
+    console.log(res.body?.mess);
+    console.log(JSON.parse(res.body?.mess || ''));
 
     if (res.status === 200) {
       this.router.navigate(

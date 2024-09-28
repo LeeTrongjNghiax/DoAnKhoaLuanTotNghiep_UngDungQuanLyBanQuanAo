@@ -1,3 +1,10 @@
 :host {
   flex: 1;
+  padding: var(--spacing-04);
+
+  .product-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-04);
+  }
 }
