@@ -8,7 +8,7 @@ export class FormOtpForgotPasswordService {
   readonly form = new FormGroup({
     email: new FormControl('', [
       Validators.required, 
-      Validators.pattern(/^[A-Za-z][A-Za-z0-9]*@gmail.com$/gi)
+      Validators.pattern(/^.*@gmail.com$/gi)
     ]), 
   })
 

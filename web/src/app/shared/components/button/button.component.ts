@@ -10,13 +10,9 @@ import { NzButtonModule } from 'ng-zorro-antd/button';
   templateUrl: './button.component.html',
   styleUrl: './button.component.scss'
 })
-export class TButtonComponent implements OnChanges{
+export class TButtonComponent {
   @Input() iconName: string = '';
   @Input() label: string = 'Button';
   @Input() isDisabled: boolean = false;
   @Input() isLoading: boolean = false;
-
-  public ngOnChanges(changes: SimpleChanges): void {
-    // this.isLoading = changes.
-  }
 }

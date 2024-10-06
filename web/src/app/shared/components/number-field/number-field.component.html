@@ -1,0 +1,10 @@
+<app-button label="-" (click)="decrese()"></app-button>
+<nz-input-number
+  [ngModel]="value"
+  (ngModelChange)="onModalChange($event)"
+  [nzMin]="min"
+  [nzMax]="max"
+  [nzStep]="step"
+>
+</nz-input-number>
+<app-button label="+" (click)="increse()"></app-button>

@@ -4,8 +4,27 @@
     <app-text-field placeholder="Tìm kiếm sản phẩm">
     </app-text-field>
   </li>
-  <li><a routerLink="/login" class="uppercase">Đồ nam</a></li>
-  <li><a routerLink="/login" class="uppercase">Đồ nữ</a></li>
+  <li>
+    <app-dropdown 
+      label="ĐỒ NAM" 
+      [dropdownItems]="dropdownItems"
+    >
+    </app-dropdown>
+  </li>
+  <li>
+    <app-dropdown 
+      label="ĐỒ NỮ" 
+      [dropdownItems]="dropdownItems"
+    >
+    </app-dropdown>
+  </li>
+  <li>
+    <app-dropdown 
+      label="ĐỒ UNISEX" 
+      [dropdownItems]="dropdownItems"
+    >
+    </app-dropdown>
+  </li>
   <li>
     <a routerLink="/login">
       <svg-icon src="log-in.svg"></svg-icon>
@@ -14,6 +33,11 @@
   <li>
     <a routerLink="/sign-up">
       <svg-icon src="user-plus.svg"></svg-icon>
+    </a>
+  </li>
+  <li>
+    <a routerLink="/cart">
+      <svg-icon src="shopping-cart.svg"></svg-icon>
     </a>
   </li>
 </ul>

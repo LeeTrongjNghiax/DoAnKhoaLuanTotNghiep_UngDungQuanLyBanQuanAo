@@ -26,6 +26,10 @@
     </span>
   </div>
   
+  <div *ngIf="errorMessage">
+    <span class="error">{{ errorMessage }}</span>
+  </div>
+
   <div class="input-group">
     <app-button (click)="onSendOtp()" label="Tiếp tục"></app-button>
   </div>

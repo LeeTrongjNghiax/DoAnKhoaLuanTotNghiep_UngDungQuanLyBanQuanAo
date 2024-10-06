@@ -1,0 +1,24 @@
+<div class="left">
+  <img [src]="product.imageAlbum[0]">
+</div>
+
+<div class="right">
+  <p class="name">{{ product.name }}</p>
+  <p class="brand">Thương hiệu: Đang cập nhật</p>
+  <p class="price">{{ product.price.toLocaleString() }}đ</p>
+  <div class="size">
+    <p>Kích thước</p>
+    <app-checkbox-with-label label="S" value="S"></app-checkbox-with-label>
+    <app-checkbox-with-label label="M" value="M"></app-checkbox-with-label>
+    <app-checkbox-with-label label="L" value="L"></app-checkbox-with-label>
+    <app-checkbox-with-label label="XL" value="XL"></app-checkbox-with-label>
+  </div>
+  <div class="sale-notification">
+    <p>- Miễn phí vận chuyển dành cho đơn hàng từ 500k trở lên</p>
+    <p>- Ưu đãi dành cho khách hàng VIP</p>
+  </div>
+  <div class="quantity">
+    <app-number-field></app-number-field>
+    <app-button label="Thêm vào giỏ hàng"></app-button>
+  </div>
+</div>

@@ -32,6 +32,10 @@
       Email phải bắt đầu bằng chữ cái, không được chứa kí tự đặc biệt và kết thúc
       bằng &#64;gmail.com
     </span>
+
+    <div *ngIf="errorMessage">
+      <span class="error">{{ errorMessage }}</span>
+    </div>
   </div>
 
   <div class="input-group">

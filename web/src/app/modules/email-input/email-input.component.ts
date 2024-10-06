@@ -27,9 +27,13 @@ import { TButtonComponent } from '../../shared/components/button/button.componen
 export class EmailInputComponent implements OnDestroy {
   public destroy = new Subject<void>();
   public isFormSubmited: boolean = false;
+  public isLoading: boolean = false;
+  public errorMessage: string = '';
 
   public onClick() {
+    this.isLoading = true;
     this.isFormSubmited = true;
+    this.errorMessage = '';
 
     if (!this.formOtpForgotPasswordService.form.valid) {
       this.formOtpForgotPasswordService.form.markAllAsTouched();
@@ -51,21 +55,22 @@ export class EmailInputComponent implements OnDestroy {
   }
 
   private onSendOtpSuccess(res: HttpResponse<IUserSendOtpResponse>) {
-    console.log(res.body?.mess);
-    console.log(JSON.parse(res.body?.mess || ''));
+    this.isLoading = false;
 
-    if (res.status === 200) {
+    if (res.body?.mess === "Send OTP Success") {
       this.router.navigate(
         [`/otp-input-to-reset-password`, { 
           email: this.formOtpForgotPasswordService.form.value.email 
         }], 
       );
-    } else {
+    } else if (res.body?.mess === "Account Not Found") {
+      this.errorMessage = "Không tìm thấy tài khoản với email này";
     }
   }
 
   private onSendOtpFail(res: HttpResponse<IUserSendOtpResponse>) {
-    console.log(res);
+    this.isLoading = false;
+    this.errorMessage = res.statusText;
   }
 
   public constructor(

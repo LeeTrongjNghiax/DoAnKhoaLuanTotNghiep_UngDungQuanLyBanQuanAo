@@ -12,6 +12,7 @@ import { UserService } from '../../core/services/user.service';
 import { TButtonComponent } from '../../shared/components/button/button.component';
 import { TTextFieldComponent } from '../../shared/components/text-field/text-field.component';
 import { HttpResponse } from '@angular/common/http';
+import { TPasswordFieldComponent } from '../../shared/components/password-field/password-field.component';
 
 @Component({
   selector: 'app-forgot-password-input',
@@ -21,6 +22,7 @@ import { HttpResponse } from '@angular/common/http';
     ReactiveFormsModule, 
     TButtonComponent, 
     TTextFieldComponent, 
+    TPasswordFieldComponent
   ],
   templateUrl: './forgot-password-input.component.html',
   styleUrl: './forgot-password-input.component.scss'
@@ -28,9 +30,13 @@ import { HttpResponse } from '@angular/common/http';
 export class ForgotPasswordInputComponent {
   public destroy = new Subject<void>();
   public isFormSubmited: boolean = false;
+  public isLoading: boolean = false;
+  public errorMessage: string = '';
 
   public onChangePassword() {
+    this.errorMessage = '';
     this.isFormSubmited = true;
+    this.isLoading = true;
 
     if (!this.formUserForgotPasswordService.form.valid) {
       this.formUserForgotPasswordService.form.markAllAsTouched();
@@ -53,12 +59,14 @@ export class ForgotPasswordInputComponent {
   }
 
   private onChangePasswordSuccess(res: HttpResponse<IUserChangePasswordResponse>) {
+    this.isFormSubmited = false;
     console.log(res);
     this.route.navigate(['']);
   }
 
   private onChangePasswordFail(res: HttpResponse<IUserChangePasswordResponse>) {
-    console.log(res);
+    this.isFormSubmited = false;
+    this.errorMessage = res.statusText;
   }
 
   public constructor (

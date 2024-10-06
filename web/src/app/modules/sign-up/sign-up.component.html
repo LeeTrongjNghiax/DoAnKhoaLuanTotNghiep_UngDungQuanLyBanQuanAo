@@ -186,6 +186,10 @@
     </span>
   </div>
   
+  <div *ngIf="errorMessage">
+    <span class="error">{{ errorMessage }}</span>
+  </div>
+
   <div (click)="onRegister()" class="input-group">
     <app-button label="Đăng ký"></app-button>
   </div>

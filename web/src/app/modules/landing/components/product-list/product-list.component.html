@@ -1,0 +1,12 @@
+<!-- <nz-breadcrumb>
+  <nz-breadcrumb-item><a routerLink="">Home</a></nz-breadcrumb-item>
+  <nz-breadcrumb-item><a routerLink="">{{ label }}</a></nz-breadcrumb-item>
+</nz-breadcrumb>
+
+<h1>{{ label }}</h1> -->
+
+<div class="product-list">
+  <ng-container *ngFor="let product of products">
+    <app-product-item [product]="product"></app-product-item>
+  </ng-container>
+</div>

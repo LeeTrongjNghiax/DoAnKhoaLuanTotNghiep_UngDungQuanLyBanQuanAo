@@ -16,22 +16,19 @@ export class OtpService {
   public sendOtp(params: IUserSendOtpParams): 
     Observable<HttpResponse<IUserSendOtpResponse>> {
     return this.http.post<IUserSendOtpResponse>(
-      this.apiConfigToken.sendOtp, params, { observe: 'response' }
+      this.apiConfigToken.sendOtp, params, { 
+        observe: 'response', 
+      }
     )
-      // .pipe(catchError(this.errorHandler))
   }
 
   public validOtp(params: IUserValidOtpParams): 
     Observable<HttpResponse<IUserValidOtpResponse>> {
     return this.http.post<IUserValidOtpResponse>(
-      this.apiConfigToken.validOtp, params, { observe: 'response' }
+      this.apiConfigToken.validOtp, params, { 
+        observe: 'response', 
+      }
     )
-      // .pipe(catchError(this.errorHandler))
-  }
-
-  private errorHandler(error: HttpErrorResponse): ObservableInput<any> {
-    console.log(error);
-    return throwError(`Error: ${error.message}`)
   }
   
   constructor(

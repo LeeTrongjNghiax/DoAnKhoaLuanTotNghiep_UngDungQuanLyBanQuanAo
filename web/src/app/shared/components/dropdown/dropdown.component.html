@@ -1,0 +1,14 @@
+<app-button 
+  [label]="label" 
+  nz-dropdown 
+  [nzDropdownMenu]="menu"
+>
+</app-button>
+
+<nz-dropdown-menu #menu="nzDropdownMenu">
+  <ul nz-menu nzSelectable="" *ngFor="let item of dropdownItems">
+    <li nz-menu-item>
+      <a [routerLink]="item.link">{{ item.name }}</a>
+    </li>
+  </ul> 
+</nz-dropdown-menu>

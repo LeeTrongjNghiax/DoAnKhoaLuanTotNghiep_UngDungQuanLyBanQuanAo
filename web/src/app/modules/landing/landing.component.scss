@@ -1,10 +1,37 @@
 :host {
   flex: 1;
   padding: var(--spacing-04);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-04);
+
+  .landing-image img {
+    padding-bottom: var(--spacing-04);
+  }
+
+  .product-category-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 
   .product-list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: var(--spacing-04);
   }
+}
+
+nz-carousel {
+  margin-bottom: var(--spacing-04);
+}
+
+[nz-carousel-content] {
+  height: 640px;
+  overflow: hidden;
+}
+
+nz-tab {
+  background-color: red;
+  font-size: 30px;
 }

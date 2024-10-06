@@ -28,9 +28,13 @@ import { HttpResponse } from '@angular/common/http';
 export class OtpInputToSignUpComponent implements OnDestroy {
   public destroy = new Subject<void>();
   public isFormSubmited: boolean = false;
+  public isLoading: boolean = false;
+  public errorMessage: string = "";
 
   public onSendOtp() {
     this.isFormSubmited = true;
+    this.isLoading = true;
+    this.errorMessage = "";
 
     if (!this.formUserSignUpService.form.valid) {
       this.formUserSignUpService.form.markAllAsTouched();
@@ -56,11 +60,14 @@ export class OtpInputToSignUpComponent implements OnDestroy {
   }
 
   private onRegisterSuccess(res: HttpResponse<IUserRegisterResponse>) {
+    this.isLoading = false;
     console.log(res);
     this.route.navigate(['']);
   }
 
   private onRegisterFail(res: HttpResponse<IUserRegisterResponse>) {
+    this.isLoading = false;
+    this.errorMessage = res.statusText;
     console.log(res);
   }
 

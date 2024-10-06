@@ -20,6 +20,7 @@ export class TCheckboxWithLabelComponent implements ControlValueAccessor {
   @Input() label: string = '';
   @Input() value: string = '';
   @Input() isChecked: boolean = false;
+  @Input() fontSize: number = 25;
   @Output() changeValueEventEmitter: EventEmitter<boolean> =
     new EventEmitter<boolean>();
 

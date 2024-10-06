@@ -1,5 +1,3 @@
-import { IHttpResponse } from "./http-response";
-
-export interface IUserValidOtpResponse extends IHttpResponse {
+export interface IUserValidOtpResponse {
   mess: string, 
 }

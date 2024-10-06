@@ -11,20 +11,23 @@ import { OtpService } from '../../core/services/otp.service';
 import { TButtonComponent } from '../../shared/components/button/button.component';
 import { TTextFieldComponent } from '../../shared/components/text-field/text-field.component';
 import { HttpResponse } from '@angular/common/http';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-otp-input-to-reset-password',
   standalone: true,
-  imports: [ReactiveFormsModule, TTextFieldComponent, TButtonComponent, ],
+  imports: [ReactiveFormsModule, TTextFieldComponent, TButtonComponent, NgIf],
   templateUrl: './otp-input-to-reset-password.component.html',
   styleUrl: './otp-input-to-reset-password.component.scss'
 })
 export class OtpInputToResetPasswordComponent implements OnDestroy {
   public destroy = new Subject<void>();
-  public isFormSubmited: boolean = false;
+  public isLoading: boolean = false;
+  public errorMessage: string = "";
 
   public onSendOtp() {
-    this.isFormSubmited = true;
+    this.isLoading = true;
+    this.errorMessage = "";
 
     if (!this.formOtpForgotPasswordOtpService.form.valid) {
       this.formOtpForgotPasswordOtpService.form.markAllAsTouched();
@@ -47,11 +50,23 @@ export class OtpInputToResetPasswordComponent implements OnDestroy {
   }
 
   private onSendOtpSuccess(res: HttpResponse<IUserValidOtpResponse>) {
-    console.log(res);
-    this.route.navigate(['forgot-password-input']);
+    this.isLoading = false;
+
+    if (res.body?.mess === "Account Not Found") {
+      this.errorMessage = "Email để xác nhận OTP không tồn tại";
+    } else if (res.body?.mess === "OTP Expired") {
+      this.errorMessage = "OTP đã hết hạn. Vui lòng thử lại";
+    } else if (res.body?.mess === "OTP Invalid") {
+      this.errorMessage = "OTP không đúng";
+    } else if (res.body?.mess === "OTP Valid") {
+      this.route.navigate(['forgot-password-input']);
+    }
+    
   }
 
   private onSendOtpFail(res: HttpResponse<IUserValidOtpResponse>) {
+    this.isLoading = false;
+    this.errorMessage = res.statusText;
     console.log(res);
   }
 

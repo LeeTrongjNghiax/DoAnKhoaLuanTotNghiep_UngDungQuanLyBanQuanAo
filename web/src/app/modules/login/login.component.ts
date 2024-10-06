@@ -43,8 +43,8 @@ export class LoginComponent implements OnDestroy {
   }
 
   public onClickLogIn() {
-    this.isFormSubmited = true;
     this.errorMessage = '';
+    this.isFormSubmited = true;
     this.isLoading = true;
 
     if (!this.formUserLoginService.form.valid) {
@@ -69,13 +69,12 @@ export class LoginComponent implements OnDestroy {
 
   private onLoginSuccess(res: HttpResponse<IUserLoginResponse>) {
     this.isLoading = false;
+
     switch (res.status) {
       case EHttpResponseCode.OK:
         if (res.body?.mess === 'Login Fail') {
-          console.log("1");
           this.errorMessage = 'Tên tài khoản hoặc mật khẩu không đúng'
         } else {
-          console.log("2");
           this.notificationService.success(
             '', 
             'Login successfully!', 
@@ -90,12 +89,11 @@ export class LoginComponent implements OnDestroy {
       default:
         break;
     }
-
-    console.log(res);
   }
 
   private onLoginFail(res: HttpResponse<IUserLoginResponse>) {
     this.isLoading = false;
+    this.errorMessage = res.statusText;
     console.log(res);
   }
 
