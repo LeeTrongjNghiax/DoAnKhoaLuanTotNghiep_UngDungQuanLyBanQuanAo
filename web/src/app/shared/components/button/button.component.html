@@ -8,6 +8,6 @@
 >
   <ng-container *ngIf="!isLoading">
     <svg-icon *ngIf="iconName" src="/{{ iconName }}.svg"></svg-icon>
-    {{ label }}
+    <span class="invert-text-color">{{ label }}</span>
   </ng-container>
 </button>

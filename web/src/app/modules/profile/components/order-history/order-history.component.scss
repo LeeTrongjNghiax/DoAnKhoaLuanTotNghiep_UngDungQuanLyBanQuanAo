@@ -1,0 +1,15 @@
+:host {
+  width: 100%;
+  // padding: 40px 80px;
+
+  .order-title {
+    box-shadow: 0px 4px 4px 0px #0000003f;
+    padding: var(--spacing-04);
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 8fr;
+
+    p {
+      font-weight: 600;
+    }
+  }
+}

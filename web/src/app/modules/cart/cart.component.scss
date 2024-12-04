@@ -1,29 +1,58 @@
 :host {
-  padding: var(--spacing-04);
+  flex: 1;
+  padding: var(--spacing-08);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-04);
 
   .cart {
-    display: grid;
-    grid-template-columns: 7fr 3fr;
-    gap: var(--spacing-04);
+    .product-title {
+      display: grid;
+      grid-template-columns: 1fr 1fr 14fr 2fr 3fr 3fr;
+      padding: var(--spacing-04);
+      gap: var(--spacing-04);
+      align-items: center;
+      place-items: center stretch;
 
-    .left {
-
+      p {
+        text-align: center;
+        font-weight: 600;
+      }
     }
 
     .right {
-      background: #eee;
-      padding: var(--spacing-04);
+      border: 1px solid #000;
+      width: 50vw;
+      align-self: flex-end;
+      padding: var(--spacing-08);
 
       .total-section {
         display: flex;
         justify-content: space-between;
+        border-radius: var(--spacing-04);
 
         p {
-          font-size: 30px;
+          font-size: 20px;
         }
 
         .total {
           font-weight: 600;
+        }
+      }
+
+      .pay-btn {
+        app-button {
+          border-radius: var(--spacing-04);
+        }
+      }
+      
+      .address {
+        p {
+          font-size: 20px;
+        }
+
+        input {
+          width: 100%;
         }
       }
     }
@@ -32,6 +61,7 @@
   .title {
     font-size: 30px;
     font-weight: 600;
+    padding-top: var(--spacing-04);
     padding-left: var(--spacing-04);
   }
 }

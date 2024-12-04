@@ -1,0 +1,62 @@
+<ul>
+  <li><a routerLink="" class="uppercase">
+    <img src="https://raw.githubusercontent.com/LeeTrongjNghiax/18_23_Nhom3_LeTrongNghia_NguyenDucLong_DHKTPM16GTT/refs/heads/master/Image/logo_Favicon.ico" height="50">
+  </a></li>
+  <li class="search">
+    <app-text-field placeholder="Tìm kiếm sản phẩm">
+    </app-text-field>
+  </li>
+  <li>
+    <app-dropdown 
+      label="QUẦN" 
+      [dropdownItems]="dropdownItems[1]"
+    >
+    </app-dropdown>
+  </li>
+  <li>
+    <app-dropdown 
+      label="ÁO" 
+      [dropdownItems]="dropdownItems[0]"
+    >
+    </app-dropdown>
+  </li>
+  <li>
+    <app-dropdown 
+      label="PHỤ KIỆN" 
+      [dropdownItems]="dropdownItems[2]"
+    >
+    </app-dropdown>
+  </li>
+  <li>
+    <a routerLink="/news">
+      <p>TIN TỨC</p>
+    </a>
+  </li>
+
+  <ng-container *ngIf="this.token === ''; else isLogin">
+    <li>
+      <a routerLink="/login">
+        <svg-icon src="log-in.svg"></svg-icon>
+      </a>
+    </li>
+    <li>
+      <a routerLink="/sign-up">
+        <svg-icon src="user-plus.svg"></svg-icon>
+      </a>
+    </li>
+  </ng-container>
+
+  <ng-template #isLogin>
+    <li>
+      <a routerLink="/profile/profile-info">
+        <svg-icon src="user.svg"></svg-icon>
+      </a>
+    </li>
+  </ng-template>
+
+  <li>
+    <a routerLink="/cart">
+      <svg-icon src="shopping-cart.svg"></svg-icon>
+    </a>
+  </li>
+</ul>

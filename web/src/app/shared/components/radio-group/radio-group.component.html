@@ -1,0 +1,8 @@
+<nz-radio-group
+  [ngModel]="selectedValue"
+  (ngModelChange)="onModalChange($event)"
+>
+  @for (item of values; track $index) {
+    <label nz-radio [nzValue]="item.value">{{ item.label }}</label>
+  }
+</nz-radio-group>

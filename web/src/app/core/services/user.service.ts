@@ -11,6 +11,9 @@ import { IUserRegisterResponse } from '../interfaces/api/response/user-register-
 import { IUserChangePasswordParams } from '../interfaces/api/parameters/user-change-password-params';
 import { IUserChangePasswordResponse } from '../interfaces/api/response/user-change-password-response';
 import { API_CONFIG_TOKEN } from '../../../providers/api.provider';
+import { IUserGetByTokenParams } from '../interfaces/api/parameters/user-get-by-token-params';
+import { IUserGetByTokenResponse } from '../interfaces/api/response/user-get-by-token-response';
+import { IUserGetByIdResponse } from '../interfaces/api/response/user-get-by-id-response';
 
 @Injectable({
   providedIn: 'root'
@@ -33,9 +36,31 @@ export class UserService {
     )
   }
 
+  public getById(id: string): Observable<HttpResponse<IUserGetByIdResponse>> {
+    return this.http.get<IUserGetByIdResponse>(
+      this.apiConfigToken.user.get, { 
+        params: {
+          id: id
+        }, 
+        observe: 'response', 
+        // withCredentials: true
+      }
+    )
+  }
+
   public get(): Observable<HttpResponse<IUserGetAllResponse>> {
     return this.http.get<IUserGetAllResponse>(
       this.apiConfigToken.user.getAll, { 
+        observe: 'response', 
+        // withCredentials: true
+      }
+    )
+  }
+
+  public getByToken(params: IUserGetByTokenParams): 
+    Observable<HttpResponse<IUserGetByTokenResponse>> {
+    return this.http.post<IUserGetByTokenResponse>(
+      this.apiConfigToken.user.getByToken, params, { 
         observe: 'response', 
         // withCredentials: true
       }

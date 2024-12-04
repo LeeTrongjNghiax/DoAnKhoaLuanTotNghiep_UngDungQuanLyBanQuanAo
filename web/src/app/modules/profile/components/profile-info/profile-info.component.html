@@ -1,0 +1,57 @@
+<div class="profile-info-input-group">
+  <p>Họ tên</p>
+
+  <app-text-field></app-text-field>
+</div>
+
+<div class="profile-info-input-group">
+  <p>Số điện thoại</p>
+
+  <app-text-field></app-text-field>
+</div>
+
+<div class="profile-info-input-group">
+  <p>Email</p>
+
+  <app-text-field></app-text-field>
+</div>
+
+<div class="profile-info-input-group">
+  <p>Giới tính</p>
+
+  <app-text-field></app-text-field>
+</div>
+
+<div class="profile-info-input-group">
+  <p>Ngày sinh</p>
+
+  <app-text-field></app-text-field>
+</div>
+
+<div class="profile-info-input-group">
+  <p>Địa chỉ</p>
+
+  <app-text-field></app-text-field>
+</div>
+
+<div class="profile-info-input-group">
+  <p>Cập nhật mật khẩu</p>
+
+  <div class="profile-info-input-group">
+    <app-text-field placeholder="Mật khẩu cũ"></app-text-field>
+  </div>
+
+  <div class="profile-info-input-group">
+    <app-text-field placeholder="Mật khẩu mới"></app-text-field>
+  </div>
+
+  <div class="profile-info-input-group">
+    <app-text-field placeholder="Xác nhận mật khẩu mới"></app-text-field>
+  </div>
+</div>
+
+<div class="vertical-layout button-group">
+  <app-button label="Hủy bỏ"></app-button>
+  <app-button label="Cập nhật thay đổi"></app-button>
+  <app-button (click)="onClickSignOut()" label="Đăng xuất"></app-button>
+</div>

@@ -6,11 +6,10 @@ import { Observable } from 'rxjs';
 export class AuthenticateInterceptor implements HttpInterceptor {
   intercept(request: HttpRequest<unknown>, next: HttpHandler): 
     Observable<HttpEvent<any>> {
-    const token = "";
 
     const clonedRequest = request.clone({
       headers: request.headers
-        // .set('Authorization', `Bearer ${token}`)
+        .set('Authorization', `Bearer ${localStorage.getItem("token")}`)
         .set('Accept', `text/plain`)
         .set('Access-Control-Allow-Origin', `*`)
         .set('Access-Control-Allow-Methods', 

@@ -1,0 +1,31 @@
+:host {
+  position: sticky;
+
+  ul {
+    list-style-type: none;
+    display: flex;
+    background: var(--secondary-bg-color);
+
+    li {
+      padding: 20px;
+      display: flex;
+      align-items: center;
+
+      a {
+        text-decoration: none;
+
+        p {
+          color: var(--secondary-text-color);
+        }
+      }
+    }
+
+    :nth-last-child(3) {
+      margin-left: auto;
+    }
+
+    .search {
+      width: 400px;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+:host {
+  a {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 8fr;
+    box-shadow: 0px 4px 4px 0px #0000003f;
+    padding: var(--spacing-04);
+
+    .order-id {
+      font-weight: 600;
+    }
+  }
+
+  .collapse {
+    display: none;
+  }
+}

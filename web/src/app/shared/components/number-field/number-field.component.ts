@@ -2,11 +2,17 @@ import { Component, EventEmitter, forwardRef, Input, Output } from '@angular/cor
 import { FormsModule, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { NzInputNumberModule } from 'ng-zorro-antd/input-number';
 import { TButtonComponent } from '../button/button.component';
+import { AngularSvgIconModule } from 'angular-svg-icon';
 
 @Component({
   selector: 'app-number-field',
   standalone: true,
-  imports: [NzInputNumberModule, FormsModule, TButtonComponent],
+  imports: [
+    NzInputNumberModule, 
+    FormsModule, 
+    TButtonComponent, 
+    AngularSvgIconModule, 
+  ],
   templateUrl: './number-field.component.html',
   styleUrl: './number-field.component.scss', 
   providers: [
@@ -18,8 +24,8 @@ import { TButtonComponent } from '../button/button.component';
   ]
 })
 export class TNumberFieldComponent {
-  @Input() value: number = 0;
-  @Input() min: number = 0;
+  @Input() value: number = 1;
+  @Input() min: number = 1;
   @Input() max: number = 10;
   @Input() step: number = 1;
   @Output() changeValueEventEmitter: EventEmitter<number> =
@@ -29,13 +35,15 @@ export class TNumberFieldComponent {
   public onTouch: Function = () => {}
 
   public increse() {
-    if (this.value + this.step <= this.max)
-      this.value += this.step;
+    if (this.value + this.step <= this.max) {
+      this.onModalChange(this.value + this.step);
+    }
   }
 
   public decrese() {
-    if (this.value - this.step >= this.min)
-      this.value -= this.step;
+    if (this.value - this.step >= this.min) {
+      this.onModalChange(this.value - this.step);
+    }
   }
 
   public onModalChange(e: number) {

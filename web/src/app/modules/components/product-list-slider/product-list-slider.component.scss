@@ -1,0 +1,10 @@
+:host {
+  flex: 1;
+
+  .product-list {
+    display: flex;
+    overflow-x: scroll;
+    gap: var(--spacing-08);
+    padding: var(--spacing-04);
+  }
+}

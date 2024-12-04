@@ -1,0 +1,25 @@
+:host {
+  width: 100%;
+  padding: 0 var(--spacing-04);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-04);
+  box-shadow: 0px 4px 4px 0px #0000003f;
+  padding: var(--spacing-04);
+
+  .profile-info-input-group {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-04);
+    align-items: center;
+
+    p {
+      white-space: nowrap;
+      font-weight: 600;
+    }
+  }
+
+  .button-group {
+    justify-content: flex-end;
+  }
+}

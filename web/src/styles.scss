@@ -48,6 +48,21 @@ h1, ul {
 
 p, a, label, button, span {
   font-size: 16px;
+  margin: 0;
+}
+
+p, a, label, button, span, h1, input
+.ant-breadcrumb-separator, 
+.ant-collapse-arrow {
+  color: var(--primary-text-color);
+}
+
+.invert-text-color {
+  color: var(--secondary-text-color);
+}
+
+.ant-collapse-item, .ant-collapse-content-box, input {
+  background: var(--primary-bg-color) !important;
 }
 
 svg-icon {
@@ -57,6 +72,21 @@ svg-icon {
 
 .error {
   color: #ff0000;
+}
+
+.shadow {
+  box-shadow: 0px 4px 4px 0px #0000003f;
+}
+
+.horizontal-layout {
+  display: flex;
+  gap: var(--spacing-04);
+}
+
+.vertical-layout {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-04);
 }
 
 html, body { height: 100%; }

@@ -1,0 +1,39 @@
+:host {
+  display: flex;
+  padding: var(--spacing-08);
+  gap: var(--spacing-08);
+  // overflow-y: scroll;
+
+  .right {
+    p {
+      font-size: 25px;
+    }
+
+    .name {
+      font-size: 40px;
+      font-weight: 600;
+    }
+
+    .price {
+      font-weight: 600;
+    }
+
+    .size {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .sale-notification {
+      padding: var(--spacing-04);
+      border: 1px dashed black;
+
+      p {
+        font-size: 20px;
+      }
+    }
+
+    .quantity {
+      margin-top: auto;
+    }
+  }
+}

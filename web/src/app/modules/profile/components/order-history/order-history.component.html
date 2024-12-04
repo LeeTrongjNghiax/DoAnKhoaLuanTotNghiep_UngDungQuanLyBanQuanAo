@@ -1,0 +1,10 @@
+<div class="order-title">
+  <p>STT</p>
+  <p>Ngày tạo</p>
+  <p>Trạng thái</p>
+  <p>Sản phẩm</p>
+</div>
+
+@for (item of orders; track $index) {
+  <app-order-item [order]="item"></app-order-item>
+}

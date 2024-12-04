@@ -2,36 +2,29 @@
   <img width="100%" src="https://bizweb.dktcdn.net/100/396/594/themes/937450/assets/slider_3.jpg?1727368308550">
 </a>
 
-<div class="product-category-list">
-  @for (productCategory of productCategories; track $index) {
-    <app-product-catergory
-      [label]="productCategory.label"
-      [quantity]="productCategory.quantity"
-      [image]="productCategory.image"
-      [link]="productCategory.link"
-    ></app-product-catergory>
-  }
-</div>
-
-<nz-tabset>
+<!-- <nz-tabset>
   <nz-tab nzTitle="Sản phẩm mới">
     <app-product-list></app-product-list> 
   </nz-tab>
   <nz-tab nzTitle="Sản phẩm bán chạy">
     <app-product-list></app-product-list> 
   </nz-tab>
-</nz-tabset>
+</nz-tabset> -->
 
-<!-- @for (banner of banners; track $index) {
-  <nz-carousel 
-    nzEffect="scrollx" 
-    nzAutoPlay="" 
-    [nzLoop]="true"
-  >
-    @for (item of banner; track $index) {
-      <a [routerLink]="item.link" nz-carousel-content>
-        <img width="100%" [src]="item.image">
-      </a>
+<section>
+  <h1>Tìm theo danh mục</h1>
+  <div class="product-category-list">
+    @for (category of categories; track $index) {
+      <app-product-catergory
+        [label]="category.name"
+        [quantity]="100"
+        [image]="'a'"
+        [link]="'product-list/' + category.id"
+      ></app-product-catergory>
     }
-  </nz-carousel>
-} -->
+  </div>
+
+</section>
+
+<app-product-section title="Bán chạy"></app-product-section>
+<app-product-section title="Mới nhất"></app-product-section>

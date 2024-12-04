@@ -1,0 +1,11 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-04);
+
+  h1 {
+    padding-left: var(--spacing-04);
+    border-left: var(--spacing-04) solid red;
+    font-weight: 600;
+  }
+}

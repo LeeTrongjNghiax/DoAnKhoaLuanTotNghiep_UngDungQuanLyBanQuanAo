@@ -16,6 +16,7 @@ import { TPasswordFieldComponent } from '../../shared/components/password-field/
 import { TTextFieldComponent } from '../../shared/components/text-field/text-field.component';
 import { EHttpResponseCode } from '../../core/enums/http-response-code';
 import { NzNotificationService } from 'ng-zorro-antd/notification';
+import data from '../../../../public/data';
 
 @Component({
   selector: 'app-login',
@@ -57,6 +58,18 @@ export class LoginComponent implements OnDestroy {
       password: this.formUserLoginService.form.value.password || '', 
     }
 
+    console.log(params);
+   
+    // if (data.users.find((e) => 
+    //   (e.email === params.username && e.password === params.password) ||
+    //   (e.name === params.username && e.password === params.password)
+    // )) {
+    //   localStorage.setItem('token', 'token_test');
+    //   this.route.navigate(['/']);
+    // } else {
+    //   this.errorMessage = 'Tên tài khoản hoặc mật khẩu không đúng';
+    // }
+
     this.userService.login(params)
       .pipe(takeUntil(this.destroy))
       .subscribe(
@@ -72,19 +85,20 @@ export class LoginComponent implements OnDestroy {
 
     switch (res.status) {
       case EHttpResponseCode.OK:
-        if (res.body?.mess === 'Login Fail') {
-          this.errorMessage = 'Tên tài khoản hoặc mật khẩu không đúng'
-        } else {
-          this.notificationService.success(
-            '', 
-            'Login successfully!', 
-            { nzPlacement: 'topRight' }
-          )
-          this.route.navigate(['']);
-        }
+        this.notificationService.success(
+          '', 
+          'Login successfully!', 
+          { nzPlacement: 'topRight' }
+        )
+        localStorage.setItem("token", res.body?.data.token!);
+        this.route.navigate(['/']);
+        window.location.reload();
         break;
       case EHttpResponseCode.INTERNAL_SERVER_ERROR:
         this.errorMessage = res.statusText
+        break;
+      case EHttpResponseCode.NO_CONTENT:
+        this.errorMessage = 'Tên tài khoản hoặc mật khẩu không đúng'
         break;
       default:
         break;

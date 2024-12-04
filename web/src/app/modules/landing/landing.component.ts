@@ -1,11 +1,21 @@
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { NzBreadCrumbModule } from 'ng-zorro-antd/breadcrumb';
-import { RouterLink } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { NgFor } from '@angular/common';
 import { NzCarouselModule } from 'ng-zorro-antd/carousel';
 import { ProductCatergoryComponent } from './components/product-catergory/product-catergory.component';
 import { NzTabsModule } from 'ng-zorro-antd/tabs';
-import { ProductListComponent } from './components/product-list/product-list.component';
+import { TButtonComponent } from '../../shared/components/button/button.component';
+import { ProductSectionComponent } from '../components/product-section/product-section.component';
+import { BreadcrumbComponent } from "../../shared/components/breadcrumb/breadcrumb.component";
+import { ProductService } from '../../core/services/product.service';
+import { Subject, takeUntil } from 'rxjs';
+import { HttpResponse } from '@angular/common/http';
+import { IProductGetResponse } from '../../core/interfaces/api/response/product-get-response';
+import { IProductGetParams } from '../../core/interfaces/api/parameters/product-get-params';
+import { ICategoryGetResponse } from '../../core/interfaces/api/response/category-get-response';
+import { ICategoryResponse } from '../../core/interfaces/api/response/category-response';
+import { CategoryService } from '../../core/services/category.service';
 
 @Component({
   selector: 'app-landing',
@@ -18,12 +28,14 @@ import { ProductListComponent } from './components/product-list/product-list.com
     RouterLink,
     ProductCatergoryComponent,
     NzTabsModule,
-    ProductListComponent
+    TButtonComponent,
+    ProductSectionComponent,
+    BreadcrumbComponent
 ],
   templateUrl: './landing.component.html',
   styleUrl: './landing.component.scss'
 })
-export class LandingComponent {
+export class LandingComponent implements OnInit {
   @Input() label: string = "Label";
   public banners = [
     [
@@ -62,42 +74,52 @@ export class LandingComponent {
     ], 
   ];
 
-  public productCategories = [
-    {
-      label: "Áo thun", 
-      quantity: 40, 
-      image: "https://bizweb.dktcdn.net/thumb/large/100/396/594/themes/937450/assets/season_coll_1_img.png?1727368308550", 
-      link: "", 
-    }, 
-    {
-      label: "Áo polo", 
-      quantity: 40, 
-      image: "https://bizweb.dktcdn.net/thumb/large/100/396/594/themes/937450/assets/season_coll_2_img.png?1727368308550", 
-      link: "", 
-    }, 
-    {
-      label: "Áo sơ mi", 
-      quantity: 40, 
-      image: "https://bizweb.dktcdn.net/thumb/large/100/396/594/themes/937450/assets/season_coll_3_img.png?1727368308550", 
-      link: "", 
-    }, 
-    {
-      label: "Áo khoác", 
-      quantity: 40, 
-      image: "https://bizweb.dktcdn.net/thumb/large/100/396/594/themes/937450/assets/season_coll_4_img.png?1727368308550", 
-      link: "", 
-    }, 
-    {
-      label: "Quần jean", 
-      quantity: 40, 
-      image: "https://bizweb.dktcdn.net/thumb/large/100/396/594/themes/937450/assets/season_coll_5_img.png?1727368308550", 
-      link: "", 
-    }, 
-    {
-      label: "Quần tây", 
-      quantity: 40, 
-      image: "https://bizweb.dktcdn.net/thumb/large/100/396/594/themes/937450/assets/season_coll_6_img.png?1727368308550", 
-      link: "", 
-    }, 
-  ];
+  public destroy = new Subject<void>();
+  public errorMessage: string = '';
+  public isLoading: boolean = false;
+  public products!: [];
+  public categories!: ICategoryResponse[];
+
+  constructor(
+    private route: ActivatedRoute, 
+    private productService: ProductService, 
+    private categoryService: CategoryService, 
+  ) {}
+
+  public ngOnInit(): void {
+    this.errorMessage = '';
+    this.isLoading = true;
+
+    const params: IProductGetParams = {
+      page: '1',
+      size: '10'
+    }
+
+    this.categoryService.get()
+      .pipe(takeUntil(this.destroy))
+      .subscribe(
+        (response: HttpResponse<ICategoryGetResponse>) => 
+          this.onGetCategorySuccess(response), 
+        (response: HttpResponse<ICategoryGetResponse>) => 
+          this.onGetCategoryFail(response), 
+      )
+  }
+
+  public onGetCategorySuccess(res: HttpResponse<ICategoryGetResponse>) {
+    this.isLoading = false;
+
+    if (res.body?.data) {
+      this.categories = res.body.data
+    }
+  }
+  
+  public onGetCategoryFail(res: HttpResponse<ICategoryGetResponse>) {
+    this.isLoading = false;
+    this.errorMessage = res.statusText;
+  }
+
+  public ngOnDestroy(): void {
+    this.destroy.next();
+    this.destroy.complete();
+  }
 }

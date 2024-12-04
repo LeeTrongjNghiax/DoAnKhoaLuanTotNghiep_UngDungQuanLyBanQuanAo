@@ -1,0 +1,12 @@
+<app-breadcrumb [breadcrumbs]="breadcrumbs"></app-breadcrumb>
+
+<div class="vertical-layout">
+  @for (new of news; track $index) {
+    <app-new-item [new]="new"></app-new-item>
+    <app-new-item [new]="new"></app-new-item>
+    <app-new-item [new]="new"></app-new-item>
+    <app-new-item [new]="new"></app-new-item>
+    <app-new-item [new]="new"></app-new-item>
+    <app-new-item [new]="new"></app-new-item>
+  }
+</div>

@@ -1,0 +1,345 @@
+2024-11-23 14:00:43,939 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is not available. Remote download required.
+2024-11-23 14:01:01,008 [Worker-17: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:Gateway:0.0.1-SNAPSHOT @ C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\Gateway\pom.xml.
+2024-11-23 14:01:02,829 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 2 resources from src\main\resources to target\classes
+2024-11-23 14:01:02,852 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-23 14:01:02,857 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\Gateway\src\test\resources
+2024-11-23 14:01:03,399 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 2 resources from src\main\resources to target\classes
+2024-11-23 14:01:03,402 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-23 14:01:03,406 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\Gateway\src\test\resources
+2024-11-23 14:01:04,008 [Worker-22: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:Server:0.0.1-SNAPSHOT @ C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\Server\pom.xml.
+2024-11-23 14:01:05,546 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-23 14:01:05,565 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-23 14:01:05,570 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\Server\src\test\resources
+2024-11-23 14:01:05,909 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-23 14:01:05,911 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-23 14:01:05,915 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\Server\src\test\resources
+2024-11-23 14:01:07,053 [Worker-10: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:ServiceAccount:0.0.1-SNAPSHOT @ C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceAccount\pom.xml.
+2024-11-23 14:01:08,309 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-23 14:01:08,325 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-23 14:01:08,330 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceAccount\src\test\resources
+2024-11-23 14:01:08,983 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-23 14:01:08,985 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-23 14:01:08,989 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceAccount\src\test\resources
+2024-11-23 14:01:09,561 [Worker-7: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:ServiceAuth:0.0.1-SNAPSHOT @ C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceAuth\pom.xml.
+2024-11-23 14:01:10,331 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-23 14:01:10,360 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-23 14:01:10,367 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceAuth\src\test\resources
+2024-11-23 14:01:11,099 [Worker-7: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:CartService:0.0.1-SNAPSHOT @ C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceCart\pom.xml.
+2024-11-23 14:01:12,294 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-23 14:01:12,313 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-23 14:01:12,317 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceCart\src\test\resources
+2024-11-23 14:01:12,726 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-23 14:01:12,728 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-23 14:01:12,731 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceAuth\src\test\resources
+2024-11-23 14:01:12,910 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-23 14:01:12,912 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-23 14:01:12,915 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceCart\src\test\resources
+2024-11-23 14:01:13,432 [Worker-26: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:ServiceCatalog:0.0.1-SNAPSHOT @ C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceCatalog\pom.xml.
+2024-11-23 14:01:14,488 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-23 14:01:14,497 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-23 14:01:14,501 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceCatalog\src\test\resources
+2024-11-23 14:01:15,006 [Worker-26: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:ServiceCategory:0.0.1-SNAPSHOT @ C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceCategory\pom.xml.
+2024-11-23 14:01:15,974 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-23 14:01:15,985 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-23 14:01:15,989 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceCategory\src\test\resources
+2024-11-23 14:01:16,523 [Worker-26: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:ServiceEmployee:0.0.1-SNAPSHOT @ C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceEmployee\pom.xml.
+2024-11-23 14:01:17,669 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-23 14:01:17,695 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-23 14:01:17,702 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceEmployee\src\test\resources
+2024-11-23 14:01:18,468 [Worker-26: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:ServiceOTP:0.0.1-SNAPSHOT @ C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceOTP\pom.xml.
+2024-11-23 14:01:19,518 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-23 14:01:19,544 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-23 14:01:19,549 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceOTP\src\test\resources
+2024-11-23 14:01:20,020 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-23 14:01:20,022 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-23 14:01:20,025 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceCatalog\src\test\resources
+2024-11-23 14:01:20,173 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-23 14:01:20,175 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-23 14:01:20,186 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceCategory\src\test\resources
+2024-11-23 14:01:20,331 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-23 14:01:20,332 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-23 14:01:20,335 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceEmployee\src\test\resources
+2024-11-23 14:01:20,473 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-23 14:01:20,475 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-23 14:01:20,477 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceOTP\src\test\resources
+2024-11-23 14:01:21,019 [Worker-18: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:ServiceOrder:0.0.1-SNAPSHOT @ C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceOrder\pom.xml.
+2024-11-23 14:01:21,833 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-23 14:01:21,846 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-23 14:01:21,851 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceOrder\src\test\resources
+2024-11-23 14:01:22,203 [Worker-18: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:ServiceOrderDetail:0.0.1-SNAPSHOT @ C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceOrderDetail\pom.xml.
+2024-11-23 14:01:22,774 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-23 14:01:22,790 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-23 14:01:22,795 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceOrderDetail\src\test\resources
+2024-11-23 14:01:23,333 [Worker-18: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:ServiceOrderStatus:0.0.1-SNAPSHOT @ C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceOrderStatus\pom.xml.
+2024-11-23 14:01:23,969 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-23 14:01:23,992 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-23 14:01:23,997 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceOrderStatus\src\test\resources
+2024-11-23 14:01:24,311 [Worker-18: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:ServicePost:0.0.1-SNAPSHOT @ C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServicePost\pom.xml.
+2024-11-23 14:01:24,988 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-23 14:01:25,004 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-23 14:01:25,007 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServicePost\src\test\resources
+2024-11-23 14:01:25,349 [Worker-18: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:ServiceProduct:0.0.1-SNAPSHOT @ C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceProduct\pom.xml.
+2024-11-23 14:01:25,994 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-23 14:01:26,007 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-23 14:01:26,010 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceProduct\src\test\resources
+2024-11-23 14:01:26,477 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-23 14:01:26,479 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-23 14:01:26,483 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceOrder\src\test\resources
+2024-11-23 14:01:26,604 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-23 14:01:26,606 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-23 14:01:26,610 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceOrderDetail\src\test\resources
+2024-11-23 14:01:26,787 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-23 14:01:26,788 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-23 14:01:26,790 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceOrderStatus\src\test\resources
+2024-11-23 14:01:26,901 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-23 14:01:26,903 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-23 14:01:26,904 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServicePost\src\test\resources
+2024-11-23 14:01:27,048 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-23 14:01:27,049 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-23 14:01:27,051 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceProduct\src\test\resources
+2024-11-23 14:01:27,359 [Worker-17: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:ServiceProductPromotion:0.0.1-SNAPSHOT @ C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceProductPromotion\pom.xml.
+2024-11-23 14:01:27,965 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-23 14:01:27,978 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-23 14:01:27,982 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceProductPromotion\src\test\resources
+2024-11-23 14:01:28,295 [Worker-17: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:ServiceProductVariant:0.0.1-SNAPSHOT @ C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceProductVariant\pom.xml.
+2024-11-23 14:01:28,893 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-23 14:01:28,908 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-23 14:01:28,912 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceProductVariant\src\test\resources
+2024-11-23 14:01:29,264 [Worker-17: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:ServiceUser:0.0.1-SNAPSHOT @ C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceUser\pom.xml.
+2024-11-23 14:01:30,005 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-23 14:01:30,018 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-23 14:01:30,022 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceUser\src\test\resources
+2024-11-23 14:01:31,249 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-23 14:01:31,250 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-23 14:01:31,252 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceProductPromotion\src\test\resources
+2024-11-23 14:01:31,356 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-23 14:01:31,357 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-23 14:01:31,360 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceProductVariant\src\test\resources
+2024-11-23 14:01:31,472 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-23 14:01:31,474 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-23 14:01:31,476 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceUser\src\test\resources
+2024-11-23 14:04:50,354 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-23 14:04:50,355 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-23 14:04:50,357 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\Server\src\test\resources
+2024-11-23 14:04:51,636 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-23 14:04:51,636 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-23 14:04:51,639 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\Server\src\test\resources
+2024-11-23 18:23:30,717 [Worker-7: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2024-11-30 11:47:46,279 [Worker-6: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2024-11-30 11:52:13,039 [Worker-18: Launching ServiceProduct - ServiceProductApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-30 11:52:13,056 [Worker-18: Launching ServiceProduct - ServiceProductApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-30 11:52:13,059 [Worker-18: Launching ServiceProduct - ServiceProductApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceProduct\src\test\resources
+2024-11-30 11:52:15,224 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-30 11:52:15,235 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-30 11:52:15,239 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceAccount\src\test\resources
+2024-11-30 11:52:16,235 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-30 11:52:16,244 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-30 11:52:16,248 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceAuth\src\test\resources
+2024-11-30 11:52:17,499 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-30 11:52:17,526 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-30 11:52:17,536 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceCart\src\test\resources
+2024-11-30 11:52:19,332 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-30 11:52:19,355 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-30 11:52:19,361 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceCatalog\src\test\resources
+2024-11-30 11:52:20,479 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-30 11:52:20,499 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-30 11:52:20,505 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceCategory\src\test\resources
+2024-11-30 11:52:22,071 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-30 11:52:22,097 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-30 11:52:22,103 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceEmployee\src\test\resources
+2024-11-30 11:52:24,414 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-30 11:52:24,439 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-30 11:52:24,447 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceOTP\src\test\resources
+2024-11-30 11:52:27,426 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-30 11:52:27,446 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-30 11:52:27,453 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceOrder\src\test\resources
+2024-11-30 11:52:31,591 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-30 11:52:31,651 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-30 11:52:31,666 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceOrderDetail\src\test\resources
+2024-11-30 11:52:34,188 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-30 11:52:34,207 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-30 11:52:34,216 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceOrderStatus\src\test\resources
+2024-11-30 11:52:37,348 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-30 11:52:37,377 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-30 11:52:37,390 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServicePost\src\test\resources
+2024-11-30 11:52:40,510 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-30 11:52:40,533 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-30 11:52:40,541 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceProductPromotion\src\test\resources
+2024-11-30 11:52:45,128 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-30 11:52:45,153 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-30 11:52:45,169 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceProductVariant\src\test\resources
+2024-11-30 14:26:30,798 [Worker-6: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2024-11-30 14:29:39,603 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-30 14:29:39,650 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-30 14:29:39,662 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceCategory\src\test\resources
+2024-11-30 18:28:41,986 [ForkJoinPool.commonPool-worker-30] ERROR reactor.core.publisher.Operators - Operator called default onErrorDropped
+reactor.core.Exceptions$ErrorCallbackNotImplemented: java.lang.RuntimeException: java.util.concurrent.CompletionException: org.eclipse.lsp4j.jsonrpc.JsonRpcException: java.io.IOException: The pipe is being closed
+Caused by: java.lang.RuntimeException: java.util.concurrent.CompletionException: org.eclipse.lsp4j.jsonrpc.JsonRpcException: java.io.IOException: The pipe is being closed
+	at org.eclipse.lsp4e.LanguageServerWrapper.lambda$9(LanguageServerWrapper.java:410)
+	at java.base/java.util.concurrent.CompletableFuture.uniExceptionally(CompletableFuture.java:990)
+	at java.base/java.util.concurrent.CompletableFuture$UniExceptionally.tryFire(CompletableFuture.java:974)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1773)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1760)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:387)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1312)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1843)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1808)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+Caused by: java.util.concurrent.CompletionException: org.eclipse.lsp4j.jsonrpc.JsonRpcException: java.io.IOException: The pipe is being closed
+	at java.base/java.util.concurrent.CompletableFuture.encodeRelay(CompletableFuture.java:368)
+	at java.base/java.util.concurrent.CompletableFuture.completeRelay(CompletableFuture.java:377)
+	at java.base/java.util.concurrent.CompletableFuture$UniCompose.tryFire(CompletableFuture.java:1152)
+	... 8 common frames omitted
+Caused by: org.eclipse.lsp4j.jsonrpc.JsonRpcException: java.io.IOException: The pipe is being closed
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageConsumer.consume(StreamMessageConsumer.java:72)
+	at org.eclipse.lsp4e.LanguageServerWrapper.lambda$3(LanguageServerWrapper.java:356)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.request(RemoteEndpoint.java:171)
+	at org.eclipse.lsp4j.jsonrpc.services.EndpointProxy.invoke(EndpointProxy.java:91)
+	at jdk.proxy13/jdk.proxy13.$Proxy34.initialize(Unknown Source)
+	at org.eclipse.lsp4e.LanguageServerWrapper.initServer(LanguageServerWrapper.java:483)
+	at org.eclipse.lsp4e.LanguageServerWrapper.lambda$4(LanguageServerWrapper.java:379)
+	at java.base/java.util.concurrent.CompletableFuture$UniCompose.tryFire(CompletableFuture.java:1150)
+	... 8 common frames omitted
+Caused by: java.io.IOException: The pipe is being closed
+	at java.base/java.io.FileOutputStream.writeBytes(Native Method)
+	at java.base/java.io.FileOutputStream.write(FileOutputStream.java:367)
+	at java.base/java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:125)
+	at java.base/java.io.BufferedOutputStream.implFlush(BufferedOutputStream.java:252)
+	at java.base/java.io.BufferedOutputStream.flush(BufferedOutputStream.java:240)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageConsumer.consume(StreamMessageConsumer.java:69)
+	... 15 common frames omitted
+2024-12-01 11:28:24,654 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2024-12-01 13:11:08,542 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-12-01 13:11:08,575 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-12-01 13:11:08,579 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceAccount\src\test\resources
+2024-12-01 13:11:09,984 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-12-01 13:11:09,999 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-12-01 13:11:10,003 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceAuth\src\test\resources
+2024-12-01 13:11:10,323 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-12-01 13:11:10,343 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-12-01 13:11:10,347 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceCart\src\test\resources
+2024-12-01 13:11:11,229 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-12-01 13:11:11,246 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-12-01 13:11:11,250 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceCatalog\src\test\resources
+2024-12-01 13:11:12,070 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-12-01 13:11:12,102 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-12-01 13:11:12,111 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceEmployee\src\test\resources
+2024-12-01 13:11:13,327 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-12-01 13:11:13,349 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-12-01 13:11:13,353 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceOTP\src\test\resources
+2024-12-01 13:11:14,164 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-12-01 13:11:14,178 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-12-01 13:11:14,182 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceOrder\src\test\resources
+2024-12-01 13:11:14,801 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-12-01 13:11:14,826 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-12-01 13:11:14,833 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceOrderDetail\src\test\resources
+2024-12-01 13:11:15,575 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-12-01 13:11:15,586 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-12-01 13:11:15,590 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceOrderStatus\src\test\resources
+2024-12-01 13:11:16,280 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-12-01 13:11:16,292 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-12-01 13:11:16,296 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServicePost\src\test\resources
+2024-12-01 13:11:16,527 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-12-01 13:11:16,543 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-12-01 13:11:16,546 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceProduct\src\test\resources
+2024-12-01 13:11:17,443 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-12-01 13:11:17,467 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-12-01 13:11:17,474 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceProductPromotion\src\test\resources
+2024-12-01 13:11:17,853 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-12-01 13:11:17,873 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-12-01 13:11:17,877 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceProductVariant\src\test\resources
+2024-12-01 13:11:18,165 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-12-01 13:11:18,178 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-12-01 13:11:18,182 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceUser\src\test\resources
+2024-12-01 13:33:28,689 [Worker-68: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-12-01 13:33:28,702 [Worker-68: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-12-01 13:33:28,705 [Worker-68: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceOTP\src\test\resources
+2024-12-01 14:30:58,731 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2024-12-01 14:32:13,883 [Worker-14: Launching ServiceAccount - ServiceAccountApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-12-01 14:32:13,910 [Worker-14: Launching ServiceAccount - ServiceAccountApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-12-01 14:32:13,915 [Worker-14: Launching ServiceAccount - ServiceAccountApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceAccount\src\test\resources
+2024-12-01 14:32:15,718 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-12-01 14:32:15,736 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-12-01 14:32:15,742 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceAuth\src\test\resources
+2024-12-01 14:32:17,061 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-12-01 14:32:17,080 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-12-01 14:32:17,089 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceCart\src\test\resources
+2024-12-01 14:32:18,432 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-12-01 14:32:18,450 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-12-01 14:32:18,456 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceCatalog\src\test\resources
+2024-12-01 14:32:19,756 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-12-01 14:32:19,769 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-12-01 14:32:19,773 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceEmployee\src\test\resources
+2024-12-01 14:32:20,819 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-12-01 14:32:20,829 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-12-01 14:32:20,834 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceOTP\src\test\resources
+2024-12-01 14:32:21,762 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-12-01 14:32:21,771 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-12-01 14:32:21,777 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceOrder\src\test\resources
+2024-12-01 14:32:22,597 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-12-01 14:32:22,608 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-12-01 14:32:22,613 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceOrderDetail\src\test\resources
+2024-12-01 14:32:23,431 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-12-01 14:32:23,453 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-12-01 14:32:23,461 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceOrderStatus\src\test\resources
+2024-12-01 14:32:24,193 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-12-01 14:32:24,201 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-12-01 14:32:24,205 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServicePost\src\test\resources
+2024-12-01 14:32:25,148 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-12-01 14:32:25,159 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-12-01 14:32:25,162 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceProduct\src\test\resources
+2024-12-01 14:32:25,911 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-12-01 14:32:25,920 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-12-01 14:32:25,923 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceProductPromotion\src\test\resources
+2024-12-01 14:32:26,595 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-12-01 14:32:26,606 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-12-01 14:32:26,610 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceProductVariant\src\test\resources
+2024-12-01 14:32:27,334 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-12-01 14:32:27,348 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-12-01 14:32:27,363 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceUser\src\test\resources
+2024-12-01 16:20:41,178 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2024-12-04 10:35:18,398 [Worker-6: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2024-12-04 10:36:48,338 [Worker-13: Launching ServiceEmployee - ServiceEmployeeApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-12-04 10:36:48,364 [Worker-13: Launching ServiceEmployee - ServiceEmployeeApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-12-04 10:36:48,368 [Worker-13: Launching ServiceEmployee - ServiceEmployeeApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceEmployee\src\test\resources
+2024-12-04 10:36:50,275 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-12-04 10:36:50,296 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-12-04 10:36:50,302 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceCatalog\src\test\resources
+2024-12-04 10:36:51,724 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-12-04 10:36:51,749 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-12-04 10:36:51,755 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceOrder\src\test\resources
+2024-12-04 10:36:52,923 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-12-04 10:36:52,945 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-12-04 10:36:52,952 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceOrderDetail\src\test\resources
+2024-12-04 10:36:53,954 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-12-04 10:36:53,972 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-12-04 10:36:53,978 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceOrderStatus\src\test\resources
+2024-12-04 10:36:54,891 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-12-04 10:36:54,903 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-12-04 10:36:54,908 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServicePost\src\test\resources
+2024-12-04 10:36:55,817 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-12-04 10:36:55,834 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-12-04 10:36:55,840 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceProductPromotion\src\test\resources
+2024-12-04 16:34:44,048 [Worker-98: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-12-04 16:34:44,084 [Worker-98: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-12-04 16:34:44,097 [Worker-98: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceCart\src\test\resources
+2024-12-04 16:34:44,366 [Worker-98: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-12-04 16:34:44,431 [Worker-98: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-12-04 16:34:44,442 [Worker-98: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceOrder\src\test\resources
+2024-12-04 16:34:44,653 [Worker-98: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-12-04 16:34:44,926 [Worker-98: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-12-04 16:34:44,948 [Worker-98: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceOrderDetail\src\test\resources
+2024-12-04 16:34:45,159 [Worker-98: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-12-04 16:34:45,285 [Worker-98: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-12-04 16:34:45,295 [Worker-98: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceOrderStatus\src\test\resources
+2024-12-04 16:34:46,087 [Worker-98: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-12-04 16:34:46,119 [Worker-98: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-12-04 16:34:46,131 [Worker-98: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceUser\src\test\resources
+2024-12-04 18:59:36,295 [Worker-129: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-12-04 18:59:36,503 [Worker-129: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-12-04 18:59:36,509 [Worker-129: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceOTP\src\test\resources
+2024-12-04 18:59:36,813 [Worker-129: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-12-04 18:59:36,928 [Worker-129: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-12-04 18:59:36,935 [Worker-129: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\OneDrive_Industrial_University_of_Ho_Chi_Minh_City\year5\KhoaLuanTotNghiep\DoAnKhoaLuanTotNghiep\doAnTotNghiep\ServiceProductPromotion\src\test\resources
+2024-12-04 19:29:51,645 [Worker-128: Launching ServiceOrderDetail - ServiceOrderDetailApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes

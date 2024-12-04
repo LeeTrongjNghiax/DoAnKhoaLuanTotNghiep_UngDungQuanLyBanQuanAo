@@ -1,0 +1,38 @@
+<app-breadcrumb [breadcrumbs]="breadcrumbs"></app-breadcrumb>
+
+<div class="product-list">
+  <div class="left">
+    <div class="filter-section">
+      <p class="uppercase">Mức giá</p>
+
+      <div>
+        <app-checkbox-with-label
+          label="Giá dưới 200.000d"
+          value=""
+        ></app-checkbox-with-label>
+        <app-checkbox-with-label
+          label="200.000d - 400.000d"
+          value=""
+        ></app-checkbox-with-label>
+        <app-checkbox-with-label
+          label="400.000d - 600.000d"
+          value=""
+        ></app-checkbox-with-label>
+        <app-checkbox-with-label
+          label="600.000d - 1.000.000d"
+          value=""
+        ></app-checkbox-with-label>
+        <app-checkbox-with-label
+          label="Giá trên 1.000.000d"
+          value=""
+        ></app-checkbox-with-label>
+      </div>
+    </div>
+  </div>
+
+  <div class="right">
+    <ng-container *ngFor="let product of products">
+      <app-product-item [product]="product"></app-product-item>
+    </ng-container>
+  </div>
+</div>

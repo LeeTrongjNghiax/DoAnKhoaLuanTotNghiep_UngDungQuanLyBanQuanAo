@@ -1,0 +1,16 @@
+<a routerLink="/news/{{new.id}}">
+  <img src="{{ new.content | findFirstImage }}">
+</a>
+
+<div class="left vertical-layout">
+  <p class="title">{{ new.title }}</p>
+
+  <div class="subtitle horizontal-layout">
+    <svg-icon src="/calendar.svg"></svg-icon>
+    <p class="time">{{ new.time | date: 'EEEE, M/d/y': "" : "vi-VN" }}</p>
+    <svg-icon src="/clock.svg"></svg-icon>
+    <p class="time-to-read">6 phút đọc</p>
+  </div>
+
+  <p class="content" innerHTML="{{ new.content | findAbstract: 100 }}"></p>
+</div>

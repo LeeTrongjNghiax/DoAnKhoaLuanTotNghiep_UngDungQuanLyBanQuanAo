@@ -1,0 +1,11 @@
+<app-breadcrumb [breadcrumbs]="breadcrumbs"></app-breadcrumb>
+
+<main class="horizontal-layout">
+  <div class="profile-sidebar vertical-layout shadow">
+    @for (item of routes; track $index) {
+      <app-link [label]="item.label" [link]="item.link"></app-link>
+    }
+  </div>
+
+  <router-outlet></router-outlet>
+</main>

@@ -1,9 +1,8 @@
 :host {
-  flex: 1;
   padding: var(--spacing-04);
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-04);
+  gap: var(--spacing-08);
 
   .landing-image img {
     padding-bottom: var(--spacing-04);

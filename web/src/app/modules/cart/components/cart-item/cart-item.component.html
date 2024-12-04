@@ -1,0 +1,23 @@
+<input type="checkbox">
+
+<svg-icon 
+  src="/x.svg"
+  nz-popconfirm=""
+  nzPopconfirmTitle="Bạn có muốn xóa sản phẩm này ra khỏi giỏ hàng không?"
+  (nzOnConfirm)="handleDelete()"
+>
+</svg-icon>
+
+<div class="product-info horizontal-layout">
+  <img class="product-image" [src]="product!.imageAlbum[0]" alt="">
+  <p class="product-name">{{ product!.name }}</p>
+</div>
+
+<div class="product-size">{{ cartItem.sizeProduct }}</div>
+
+<app-number-field 
+  [value]="this.quantity"
+  (changeValueEventEmitter)="onChangeQuantity($event)"
+></app-number-field>
+
+<p class="product-price">{{ product!.price * this.quantity | formatCurrency }}đ</p>

@@ -1,0 +1,14 @@
+<nz-breadcrumb>
+  @for (item of breadcrumbs; track $index) {
+    <nz-breadcrumb-item>
+
+      @if (item.link !== '') {
+        <a [routerLink]="item.link">{{ item.label }}</a>
+      } 
+      @else {
+        <span>{{ item.label }}</span>
+      }
+
+    </nz-breadcrumb-item>
+  } 
+</nz-breadcrumb>

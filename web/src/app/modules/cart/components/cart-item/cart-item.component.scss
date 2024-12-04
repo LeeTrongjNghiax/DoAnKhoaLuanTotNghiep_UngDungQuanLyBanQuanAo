@@ -1,0 +1,31 @@
+:host {
+  display: grid;
+  grid-template-columns: 1fr 1fr 14fr 2fr 3fr 3fr;
+  padding: var(--spacing-04);
+  gap: var(--spacing-04);
+  align-items: center;
+  box-shadow: 0px 4px 4px 0px #0000003f;
+
+  svg-icon {
+    cursor: pointer;
+  }
+
+  .product-info {
+    align-items: center;
+
+    .product-image {
+      max-width: 64px;
+      object-fit: contain;
+    }
+  }
+
+  .product-size {
+    font-weight: 700;
+    text-align: center;
+  }
+
+  .product-price {
+    font-weight: 700;
+    margin-left: auto;
+  }
+}
