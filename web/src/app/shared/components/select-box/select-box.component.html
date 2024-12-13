@@ -1,0 +1,9 @@
+<nz-select 
+  nzShowSearch 
+  [ngModel]="value" 
+  (ngModelChange)="onModalChange($event)"
+>
+  @for (item of selectItems; track $index) {
+    <nz-option [nzValue]="item.value" [nzLabel]="item.label"></nz-option>
+  }
+</nz-select>

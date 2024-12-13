@@ -6,6 +6,7 @@ export interface IApiConfig {
     getByToken: string, 
     register: string, 
     forgetPassword: string, 
+    update: string, 
   }, 
   cart: {
     getByIdUser: string, 
@@ -13,6 +14,19 @@ export interface IApiConfig {
   }, 
   order: {
     save: string, 
+    getByUser: string, 
+    update: string, 
+  }, 
+  orderDetail: {
+    getByOrder: string, 
+  }, 
+  orderStatus: {
+    update: string, 
+    getByOrderId: string, 
+  }, 
+  promotionProduct: {
+    get: string, 
+    getProduct: string, 
   }, 
   product: {
     get: string, 

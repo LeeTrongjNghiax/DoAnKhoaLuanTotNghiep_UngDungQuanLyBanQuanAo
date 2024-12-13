@@ -2,9 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { BreadcrumbComponent } from "../../shared/components/breadcrumb/breadcrumb.component";
 import { IBreadcrumb } from '../../shared/components/breadcrumb/types/breadcrumb';
-import { breadcrumbs } from '../../../constants/breadcrumbs';
 import { TLinkComponent } from "../../shared/components/link/link.component";
-import { L } from '@angular/cdk/keycodes';
 
 @Component({
   selector: 'app-profile',
@@ -20,8 +18,7 @@ export class ProfileComponent implements OnInit {
   ];
   public routes: IBreadcrumb[] = [
     {label: 'Thông tin cá nhân', link: '/profile/profile-info'}, 
-    {label: 'Lịch sử mua hàng',  link: '/profile/order-history'}, 
-    {label: 'Trạng thái mua hàng', link: '/profile/'}, 
+    {label: 'Lịch sử mua hàng', link: '/profile/order-status'}, 
   ]
 
   public constructor(private router: Router) {}

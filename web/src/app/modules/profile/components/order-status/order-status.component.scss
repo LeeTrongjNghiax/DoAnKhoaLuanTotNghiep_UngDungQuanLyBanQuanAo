@@ -1,0 +1,12 @@
+:host {
+  width: 100%;
+
+  nz-tabset {
+    width: 100%;
+  }
+
+  .order-list {
+    display: flex;
+    flex-direction: column;
+  }
+}

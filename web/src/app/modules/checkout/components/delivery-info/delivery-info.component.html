@@ -1,0 +1,26 @@
+<div class="box">
+  <p class="subtitle uppercase">Thông tin người nhận</p>
+  <p>{{ userInfo.name }}</p>
+  <p>{{ userInfo.phone }}</p>
+  <p>{{ userInfo.street }}</p>
+  <p>{{ userInfo.city }}, {{ userInfo.ward }}, {{ userInfo.district }}</p>
+</div>
+
+<p class="title uppercase">Thông tin vận chuyển</p>
+
+<div class="box delivery-section">
+  <p>Giao hàng tận nơi</p>
+  <p>{{ userInfo.shippingFee | formatCurrency }}</p>
+</div>
+
+<div class="navigate-section">
+  <app-link link="/cart" label="Giỏ hàng"></app-link>
+
+  <div class="btn-container">
+    <app-button 
+      (click)="onClickGoToPayment()"
+      label="Tiếp tục chọn phương thức thanh toán"
+    >
+    </app-button>
+  </div>
+</div>

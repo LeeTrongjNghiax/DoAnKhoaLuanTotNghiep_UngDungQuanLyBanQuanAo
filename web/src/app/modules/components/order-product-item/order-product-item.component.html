@@ -1,0 +1,23 @@
+<div class="product-list">
+  @for (orderItem of orderItems; track $index) {
+    <div class="product">
+      <div class="img-container" attr.data-quantity="{{ orderItem.quantity }}">
+        <img
+          width="50"
+          height="50"
+          [src]="getProductById(orderItem.idProduct).imageAlbum[0]" 
+          alt="hinh anh san pham"
+        >
+      </div>
+
+      <div class="product-sub-info">
+        <p class="product-name">{{ getProductById(orderItem.idProduct).name }}</p>
+        <p>Kích cỡ: {{ orderItem.sizeProduct }}</p>
+      </div>
+
+      <p>
+        {{ +getProductById(orderItem.idProduct).price * +orderItem.quantity | formatCurrency }}
+      </p>
+    </div>
+  }
+</div>

@@ -14,6 +14,8 @@ import { API_CONFIG_TOKEN } from '../../../providers/api.provider';
 import { IUserGetByTokenParams } from '../interfaces/api/parameters/user-get-by-token-params';
 import { IUserGetByTokenResponse } from '../interfaces/api/response/user-get-by-token-response';
 import { IUserGetByIdResponse } from '../interfaces/api/response/user-get-by-id-response';
+import { IUserUpdateParams } from '../interfaces/api/parameters/user-update-params';
+import { IUserUpdateResponse } from '../interfaces/api/response/user-update-response';
 
 @Injectable({
   providedIn: 'root'
@@ -71,6 +73,16 @@ export class UserService {
     Observable<HttpResponse<IUserChangePasswordResponse>> {
     return this.http.post<IUserChangePasswordResponse>(
       this.apiConfigToken.user.forgetPassword, params, { 
+        observe: 'response', 
+        // withCredentials: true
+      }
+    )
+  }
+
+  public update(params: IUserUpdateParams): 
+    Observable<HttpResponse<IUserUpdateResponse>> {
+    return this.http.put<IUserUpdateResponse>(
+      this.apiConfigToken.user.update, params, { 
         observe: 'response', 
         // withCredentials: true
       }

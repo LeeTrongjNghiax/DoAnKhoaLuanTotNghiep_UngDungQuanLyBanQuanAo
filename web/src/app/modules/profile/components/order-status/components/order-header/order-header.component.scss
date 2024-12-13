@@ -1,0 +1,10 @@
+:host {
+  padding-bottom: var(--spacing-04);
+  display: grid;
+  grid-template-columns: 4fr 3fr 3fr 3fr 2fr;
+  gap: var(--spacing-04);
+
+  p {
+    font-weight: 600;
+  }
+}

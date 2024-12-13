@@ -26,6 +26,10 @@ import { IOrderSaveParams } from '../../core/interfaces/api/parameters/order-sav
 import { IOrderSaveResponse } from '../../core/interfaces/api/response/order-save-response';
 import { IUserGetByIdResponse } from '../../core/interfaces/api/response/user-get-by-id-response';
 import { IOrderItemResponse } from '../../core/interfaces/api/response/order-item-response';
+import { NzNotificationService } from 'ng-zorro-antd/notification';
+import { IUserResponse } from '../../core/interfaces/api/response/user-response';
+import { NgIf } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cart',
@@ -33,6 +37,7 @@ import { IOrderItemResponse } from '../../core/interfaces/api/response/order-ite
   imports: [
     TButtonComponent,
     TNumberFieldComponent,
+    NgIf, 
     AngularSvgIconModule,
     CartItemComponent,
     TTextFieldComponent,
@@ -49,7 +54,7 @@ export class CartComponent implements OnInit {
     {label: 'Giỏ hàng', link: '/cart'}
   ];
   public destroy = new Subject<void>();
-  public user!: IUserGetByIdResponse;
+  public user!: IUserResponse;
   public cart!: ICartResponse;
   public productPrices: {id: string, price: number}[] = [];
 
@@ -57,7 +62,8 @@ export class CartComponent implements OnInit {
     private userService: UserService, 
     private cartService: CartService, 
     private productService: ProductService, 
-    private orderService: OrderService, 
+    private notificationService: NzNotificationService, 
+    private route: Router, 
   ) {}
 
   public ngOnInit(): void {
@@ -106,7 +112,7 @@ export class CartComponent implements OnInit {
   public onGetUserByIdSuccess(res: HttpResponse<IUserGetByIdResponse>) {
     console.log(res);
     if (res.body) {
-      this.user = res.body;
+      this.user = res.body.data;
     }
   }
 
@@ -188,44 +194,18 @@ export class CartComponent implements OnInit {
   }
 
   public onClickPay() {
-    console.log("Paid");
-
-    const listProduct: IOrderItemResponse[] = [];
-
-    this.cart.listCartItem.map((e, index) => {
-      listProduct.push({
-        idProduct: e.idProduct,
-        quantity: e.quantity,
-        sizeProduct: e.sizeProduct,
-        price: +this.productPrices[index].price,
-        pricePromotion: '0'
-      })
-    })
-
-    const params: IOrderSaveParams = {
-      paymentMethod: 'card',
-      address: {
-        street: this.user.address?.street || '',
-        ward: this.user.address?.ward || '',
-        district: this.user.address?.state || '',
-        city: this.user.address?.city || ''
-      },
-      currentStatus: 'create',
-      listProduct: listProduct
-    }
-
-    this.orderService.save(params)
-      .pipe(takeUntil(this.destroy))
-      .subscribe(
-        (response: HttpResponse<IOrderSaveResponse>) => 
-          this.onSaveOrderSuccess(response), 
-        (response: HttpResponse<IOrderSaveResponse>) => 
-          this.onSaveOrderFail(response), 
-      )
+    this.route.navigate(["/checkout"]);
   }
 
   public onSaveOrderSuccess(res: HttpResponse<IOrderSaveResponse>) {
     console.log(res);
+
+    this.notificationService.success(
+      '', 
+      'Thanh toán giỏ hàng thàng công!', 
+      { nzPlacement: 'topRight' }
+    );
+    window.location.reload();
   }
 
   public onSaveOrderFail(res: HttpResponse<IOrderSaveResponse>) {

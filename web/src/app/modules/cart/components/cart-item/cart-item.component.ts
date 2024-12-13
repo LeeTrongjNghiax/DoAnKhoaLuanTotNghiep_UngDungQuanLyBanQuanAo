@@ -21,6 +21,8 @@ import { NzPopconfirmModule } from 'ng-zorro-antd/popconfirm';
 import { NzMessageService } from 'ng-zorro-antd/message';
 import { ICartUpdateParams } from '../../../../core/interfaces/api/parameters/cart-update-params';
 import { ICartResponse } from '../../../../core/interfaces/api/response/cart-response';
+import { PromotionProductService } from '../../../../core/services/promotion-product.service';
+import { IPromotionProductGetByProductResponse } from '../../../../core/interfaces/api/response/promotion-product-get-by-product-response';
 
 @Component({
   selector: 'app-cart-item',
@@ -44,11 +46,13 @@ export class CartItemComponent implements OnInit {
   public quantity: number = 1;
   public userId: string = '';
   public cart!: ICartResponse;
+  public priceDiscount: string = "";
 
   constructor(
     private productService: ProductService, 
     private userService: UserService, 
     private cartService: CartService, 
+    private promotionProductService: PromotionProductService, 
     private nzMessageService: NzMessageService, 
   ) {}
 
@@ -83,10 +87,31 @@ export class CartItemComponent implements OnInit {
   public onGetProductByBarcodeSuccess(res: HttpResponse<IProductGetByBarcodeResponse>) {
     if (res.body) {
       this.product = res.body.data;
+
+      this.promotionProductService.getProduct(this.product.barcode)
+        .pipe(takeUntil(this.destroy))
+        .subscribe(
+          (response: HttpResponse<IPromotionProductGetByProductResponse>) => 
+            this.onPromotionProductGetSuccess(response), 
+          (response: HttpResponse<IPromotionProductGetByProductResponse>) => 
+            this.onPromotionProductGetFail(response), 
+        );
     }
   }
 
   public onGetProductByBarcodeFail(res: HttpResponse<IProductGetByBarcodeResponse>) {
+    console.log(res);
+  }
+
+  public onPromotionProductGetSuccess(res: HttpResponse<IPromotionProductGetByProductResponse>) {
+    console.log(res);
+
+    if (res.body) {
+      this.priceDiscount = res.body.data.priceDiscount;
+    }
+  }
+
+  public onPromotionProductGetFail(res: HttpResponse<IPromotionProductGetByProductResponse>) {
     console.log(res);
   }
 

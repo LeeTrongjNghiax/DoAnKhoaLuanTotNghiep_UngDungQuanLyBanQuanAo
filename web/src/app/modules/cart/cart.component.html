@@ -1,5 +1,6 @@
 <app-breadcrumb [breadcrumbs]="breadcrumbs"></app-breadcrumb>
 
+<div *ngIf="cart.listCartItem.length > 0; else noCartItem">
 <div class="cart vertical-layout">
   <div class="product-title shadow">
     <input type="checkbox">
@@ -7,7 +8,8 @@
     <p>Tên sản phẩm</p>
     <p>Kích cỡ</p>
     <p>Số lượng</p>
-    <p>Giá</p>
+      <p>Tổng cộng</p>
+      <p>Thành tiền</p>
   </div>
 
   <div class="product-list vertical-layout">
@@ -23,24 +25,14 @@
   </div>
 
   <div class="right vertical-layout">
-    <div class="total-section">
-      <p class="uppercase">Tổng cộng</p>
-      <p class="total">{{ getTotal() | formatCurrency }}đ</p>
-    </div>
-
-    <div class="address">
-      <p class="uppercase">Địa chỉ thanh toán</p>
-
-      <app-text-field></app-text-field>
-    </div>
-
-    <div class="pay-btn">
       <app-button (click)="onClickPay()" label="Thanh toán"></app-button>
     </div>
-
-    <p>(Thanh toán khi nhận hàng)</p>
   </div>
 </div>
+
+<ng-template #noCartItem>
+  <div class="no-cart-item">Không có sản phẩm trong giỏ hàng để thanh toán</div>
+</ng-template>
 
 <app-product-section title="Có thể bạn sẽ thích"></app-product-section>
 <app-product-section title="Sản phẩm cùng loại"></app-product-section>

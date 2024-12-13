@@ -1,0 +1,58 @@
+<p>{{ order.idOrder }}</p>
+<p>{{ getAddress() }}</p>
+
+<div>
+  <app-button (click)="toggleOrderHistoryModal()" label="Lịch sử đơn hàng">
+  </app-button>
+</div>
+
+<div>
+  <app-button (click)="toggleOrderDetailModal()" label="Chi tiết đơn hàng">
+  </app-button>
+</div>
+
+@if (isShowCancelOrderOption) {
+  <div>
+    <app-button 
+      label="Hủy"
+      nz-popconfirm=""
+      nzPopconfirmTitle="Bạn có muốn hủy đơn hàng này không?"
+      (nzOnConfirm)="onUpdateOrder(EOrderStatus.CANCEL)"
+    >
+    </app-button>
+  </div>
+}
+
+@if (isShowDoneOrderOption) {
+  <div>
+    <app-button 
+      label="Xác nhận"
+      nz-popconfirm=""
+      nzPopconfirmTitle="Bạn có muốn xác nhận đã nhận đơn hàng này không?"
+      (nzOnConfirm)="onUpdateOrder(EOrderStatus.DONE)"
+    >
+    </app-button>
+  </div>
+}
+
+<nz-modal
+  [(nzVisible)]="isOrderDetailModalVisible"
+  nzTitle="Chi tiết đơn hàng"
+  (nzOnOk)="handleOrderDetailModalOk()" 
+  (nzOnCancel)="handleOrderDetailModalCancel()" 
+>
+  <ng-container *nzModalContent>
+    <app-order-product-item [order]="order"></app-order-product-item>
+  </ng-container>
+</nz-modal>
+
+<nz-modal
+  [(nzVisible)]="isOrderHistoryModalVisible"
+  nzTitle="Lịch sử đơn hàng"
+  (nzOnOk)="handleOrderHistoryModalOk()" 
+  (nzOnCancel)="handleOrderHistoryModalCancel()" 
+>
+  <ng-container *nzModalContent>
+    <app-order-history [idOrder]="order.idOrder"></app-order-history>
+  </ng-container>
+</nz-modal>

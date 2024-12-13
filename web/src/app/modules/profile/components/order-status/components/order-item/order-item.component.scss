@@ -1,0 +1,8 @@
+:host {
+  padding-bottom: var(--spacing-04);
+  width: 100%;
+  display: grid;
+  grid-template-columns: 4fr 3fr 3fr 3fr 2fr;
+  gap: var(--spacing-04);
+  align-items: center;
+}

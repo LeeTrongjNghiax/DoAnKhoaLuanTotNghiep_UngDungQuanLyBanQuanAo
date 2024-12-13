@@ -1,0 +1,96 @@
+<app-breadcrumb [breadcrumbs]="breadcrumbs"></app-breadcrumb>
+
+<div class="checkout">
+  <div class="left">
+    <nz-tabset [nzSelectedIndex]="selectedTabIndex">
+      <nz-tab nzTitle="Thông tin người nhận">
+        <app-user-info
+          [userInfo]="userInfo"
+          (changeValueEventEmitter)="onChangeUserInfo($event)"
+        >
+        </app-user-info>
+      </nz-tab>
+      <nz-tab 
+        nzTitle="Thông tin vận chuyển" 
+        [nzDisabled]="isDeliveryTabDisable()"
+      >
+        <app-delivery-info 
+          [userInfo]="userInfo"
+          (changeValueEventEmitter)="onChangeDeliveryInfo($event)"
+        >
+        </app-delivery-info>
+      </nz-tab>
+      <nz-tab 
+        nzTitle="Thông tin thanh toán" 
+        [nzDisabled]="isPaymentTabDisable()"
+      >
+        <app-payment-info
+          [userInfo]="userInfo"
+          (changeValueEventEmitter)="onClickPay()"
+        >
+        </app-payment-info>
+      </nz-tab>
+    </nz-tabset>
+  </div>
+
+  <div class="right">
+    <p class="products-title">Đơn hàng</p>
+
+    <div class="order-section products">
+      @for (item of cart.listCartItem; track $index) {
+        <div class="product">
+          <div class="img-container" attr.data-quantity="{{ item.quantity }}">
+            <img
+              width="50"
+              height="50"
+              [src]="getProductById(item.idProduct).imageAlbum[0]" 
+              alt="hinh anh san pham"
+            >
+          </div>
+
+          <div class="product-sub-info">
+            <p class="product-name">
+              {{ getProductById(item.idProduct).name }}
+            </p>
+            <p>Kích cỡ: {{ item.sizeProduct }}</p>
+          </div>
+
+          <p 
+            *ngIf="getPromotionProductByBarcode(item.idProduct) === '0'; 
+            else haveDiscount"
+          >{{ +getProductById(item.idProduct).price * +item.quantity 
+              | formatCurrency }}</p>
+
+          <ng-template #haveDiscount>
+            <div>
+              <del>{{ +getProductById(item.idProduct).price * +item.quantity 
+                | formatCurrency }}</del>
+              <p>{{ 
+                ( +getProductById(item.idProduct).price - 
+                +getPromotionProductByBarcode(item.idProduct) ) * 
+                +item.quantity 
+                | formatCurrency }}</p>
+            </div>
+          </ng-template>
+        </div>
+      }
+    </div>
+
+    <div class="order-section prices">
+      <div class="prices-item">
+        <p>Tạm tính:</p>
+        <p>{{ getTotal() | formatCurrency }}</p>
+      </div>
+
+      <div class="prices-item">
+        <p>Phí vận chuyển:</p>
+        <p>{{ userInfo.shippingFee | formatCurrency }}</p>
+      </div>
+    </div>
+
+    <div class="final-price">
+      <p>Tổng cộng:</p>
+      <p>{{ getTotal() + userInfo.shippingFee | formatCurrency }}</p>
+    </div>
+  </div>
+</div>

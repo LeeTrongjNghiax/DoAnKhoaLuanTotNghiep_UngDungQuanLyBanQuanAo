@@ -15,6 +15,11 @@ import { ProfileComponent } from './modules/profile/profile.component';
 import { ProfileInfoComponent } from './modules/profile/components/profile-info/profile-info.component';
 import { OrderHistoryComponent } from './modules/profile/components/order-history/order-history.component';
 import { ProductListComponent } from './modules/product-list/product-list.component';
+import { CheckoutComponent } from './modules/checkout/checkout.component';
+import { UserInfoComponent } from './modules/checkout/components/user-info/user-info.component';
+import { DeliveryInfoComponent } from './modules/checkout/components/delivery-info/delivery-info.component';
+import { PaymentInfoComponent } from './modules/checkout/components/payment-info/payment-info.component';
+import { OrderStatusComponent } from './modules/profile/components/order-status/order-status.component';
 
 export const routes: Routes = [
   {
@@ -58,6 +63,10 @@ export const routes: Routes = [
     component: CartComponent, 
   }, 
   {
+    path: 'checkout', 
+    component: CheckoutComponent, 
+  }, 
+  {
     path: 'profile', 
     component: ProfileComponent, 
     children: [
@@ -66,8 +75,8 @@ export const routes: Routes = [
         component: ProfileInfoComponent, 
       }, 
       {
-        path: 'order-history', 
-        component: OrderHistoryComponent, 
+        path: 'order-status', 
+        component: OrderStatusComponent, 
       }, 
     ]
   }, 

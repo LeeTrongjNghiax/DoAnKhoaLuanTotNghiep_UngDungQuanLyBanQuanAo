@@ -20,4 +20,7 @@
   (changeValueEventEmitter)="onChangeQuantity($event)"
 ></app-number-field>
 
-<p class="product-price">{{ product!.price * this.quantity | formatCurrency }}đ</p>
+<p class="product-price">{{ product!.price * this.quantity | formatCurrency }}</p>
+<p class="product-price">
+  {{ (product!.price - +priceDiscount) * this.quantity | formatCurrency }}
+</p>

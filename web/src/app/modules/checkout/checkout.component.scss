@@ -1,0 +1,94 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  padding: var(--spacing-08);
+
+  .checkout {
+    display: flex;
+    gap: var(--spacing-04);
+
+    .left {
+      flex-grow: 1;
+      padding: var(--spacing-08);
+    }
+
+    .right {
+      flex-grow: 10;
+      background: #fafafa;
+      padding: var(--spacing-08);
+      border: 1px solid gray;
+
+      .products-title {
+        padding-bottom: var(--spacing-04);
+        border-bottom: 1px solid black;
+        font-size: 20px;
+        font-weight: 600;
+      }
+
+      .products {
+
+        .product {
+          padding-bottom: var(--spacing-04);
+          display: grid;
+          grid-template-columns: 1fr 5fr 1fr;
+          align-items: center;
+          justify-content: space-between;
+          gap: var(--spacing-04);
+
+          .img-container {
+            position: relative;
+
+            &::after {
+              content: attr(data-quantity);
+              color: white;
+              text-align: center;
+              width: 20px;
+              height: 20px;
+              background: blue;
+              border-radius: 50%;
+              position: absolute;
+              transform: translate(-50%, -50%);
+            }
+
+            img {
+              border-radius: var(--spacing-04);
+            }
+          }
+
+          .product-sub-info {
+            .product-name {
+              font-weight: 600;
+            }
+          }
+        }
+      }
+
+      .prices {
+        padding-top: var(--spacing-04);
+        padding-bottom: var(--spacing-04);
+        border-bottom: 1px solid black;
+        display: flex;
+        flex-direction: column;
+
+        .prices-item {
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+
+      .final-price {
+        display: flex;
+        justify-content: space-between;
+        padding-top: var(--spacing-04);
+        font-size: 25px;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+.order-section {
+  padding-top: var(--spacing-08);
+  padding-bottom: var(--spacing-08);
+  border-bottom: 1px solid black;
+}

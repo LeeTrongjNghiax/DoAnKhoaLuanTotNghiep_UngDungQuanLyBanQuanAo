@@ -1,37 +1,38 @@
+<form>
 <div class="profile-info-input-group">
   <p>Họ tên</p>
 
-  <app-text-field></app-text-field>
+    <app-text-field [value]="user.name"></app-text-field>
 </div>
 
 <div class="profile-info-input-group">
   <p>Số điện thoại</p>
 
-  <app-text-field></app-text-field>
+    <app-text-field [value]="user.phone"></app-text-field>
 </div>
 
 <div class="profile-info-input-group">
   <p>Email</p>
 
-  <app-text-field></app-text-field>
+    <app-text-field [value]="user.email"></app-text-field>
 </div>
 
 <div class="profile-info-input-group">
   <p>Giới tính</p>
 
-  <app-text-field></app-text-field>
+    <app-text-field [value]="user.gender"></app-text-field>
 </div>
 
 <div class="profile-info-input-group">
   <p>Ngày sinh</p>
 
-  <app-text-field></app-text-field>
+    <app-text-field [value]="user.birthday + ''"></app-text-field>
 </div>
 
 <div class="profile-info-input-group">
   <p>Địa chỉ</p>
 
-  <app-text-field></app-text-field>
+    <app-text-field [value]="user.address?.city || ''"></app-text-field>
 </div>
 
 <div class="profile-info-input-group">
@@ -52,6 +53,6 @@
 
 <div class="vertical-layout button-group">
   <app-button label="Hủy bỏ"></app-button>
-  <app-button label="Cập nhật thay đổi"></app-button>
+    <app-button (click)="onClickUpdate()" label="Cập nhật thay đổi"></app-button>
   <app-button (click)="onClickSignOut()" label="Đăng xuất"></app-button>
-</div>
+</div></form>

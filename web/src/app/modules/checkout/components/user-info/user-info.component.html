@@ -1,0 +1,110 @@
+<p class="title uppercase">Thông tin người nhận hàng</p>
+
+<form class="single-input-form" [formGroup]="formUserInfoService.form">
+<app-text-field
+  formControlName="name"
+  [value]="userInfo.name" 
+  placeholder="Họ và tên"
+  (changeValueEventEmitter)="onChangeName($event)"
+>
+</app-text-field>
+<span 
+  *ngIf="
+    formUserInfoService.form.controls['name'].touched &&
+    formUserInfoService.form.controls['name'].errors?.['required']" 
+  class="error"
+>
+  Tên không được để trống
+</span>
+<span 
+  class="error"
+  *ngIf="
+    formUserInfoService.form.controls['name'].errors?.['pattern']
+  "
+>
+  Tên phải bắt đầu bằng chữ cái và không được chứa kí tự đặc biệt
+</span>
+
+<app-text-field
+  formControlName="phone"
+  type="phone"
+  [value]="userInfo.phone" 
+  placeholder="Số điện thoại"
+  (changeValueEventEmitter)="onChangePhone($event)"
+>
+</app-text-field>
+<span 
+  *ngIf="
+    formUserInfoService.form.controls['phone'].touched &&
+    formUserInfoService.form.controls['phone'].errors?.['required']" 
+  class="error"
+>
+  Số điện thoại không được để trống
+</span>
+<span 
+  class="error"
+  *ngIf="formUserInfoService.form.controls['phone'].errors?.['pattern']"
+>
+  Số điện thoại phải có 10 chữ số và bắt đầu bằng số 0
+</span>
+
+<app-text-field 
+  formControlName="address"
+  [value]="userInfo.street" 
+  placeholder="Địa chỉ (số nhà, tên đường)"
+  (changeValueEventEmitter)="onChangeAddress($event)"
+>
+</app-text-field>
+<span 
+  *ngIf="
+    formUserInfoService.form.controls['address'].touched &&
+    formUserInfoService.form.controls['address'].errors?.['required']" 
+  class="error"
+>
+  Địa chỉ không được để trống
+</span>
+
+<div class="address">
+  <div class="address-item">
+    <p>Tỉnh/Thành phố</p>
+    <app-select-box
+      [selectItems]="values" 
+      [value]="values[0].value"
+      (changeValueEventEmitter)="onChangeCity($event)"
+    >
+    </app-select-box>
+  </div>
+
+  <div class="address-item">
+    <p>Phường/Xã</p>
+    <app-select-box
+      [selectItems]="values"
+      [value]="values[0].value"
+      (changeValueEventEmitter)="onChangeWard($event)"
+    >
+    </app-select-box>
+  </div>
+
+  <div class="address-item">
+    <p>Quận/Huyện</p>
+    <app-select-box
+      [selectItems]="values"
+      [value]="values[0].value"
+      (changeValueEventEmitter)="onChangeDistrict($event)"
+    >
+    </app-select-box>
+  </div>
+</div>
+
+<div class="navigate-section">
+  <app-link link="/cart" label="Giỏ hàng"></app-link>
+
+  <div class="btn-container">
+    <app-button 
+      (click)="onClickGoToDelivery()"
+      label="Tiếp tục chọn phương thức vận chuyển"
+    >
+    </app-button>
+  </div>
+</div>
+</form>

@@ -1,0 +1,9 @@
+<div class="order-status-list">
+  <nz-timeline>
+    @for (orderStatus of orderStatuss; track $index) {
+      <nz-timeline-item [nzLabel]="getDate(orderStatus.time)">
+        {{ getOrderStatus(orderStatus.status) }}
+      </nz-timeline-item>
+    }
+  </nz-timeline>
+</div>

@@ -1,0 +1,38 @@
+:host {
+  .product-list {
+    .product {
+      padding-bottom: var(--spacing-04);
+      display: grid;
+      grid-template-columns: 1fr 5fr 1fr;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--spacing-04);
+
+      .img-container {
+        position: relative;
+
+        &::after {
+          content: attr(data-quantity);
+          color: white;
+          text-align: center;
+          width: 20px;
+          height: 20px;
+          background: blue;
+          border-radius: 50%;
+          position: absolute;
+          transform: translate(-50%, -50%);
+        }
+
+        img {
+          border-radius: var(--spacing-04);
+        }
+      }
+
+      .product-sub-info {
+        .product-name {
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}

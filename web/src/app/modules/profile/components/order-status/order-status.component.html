@@ -1,0 +1,87 @@
+<nz-tabset>
+  <nz-tab nzTitle="Đã tạo đơn hàng">
+    <div class="order-list">
+      <app-order-header></app-order-header>
+      @for (item of orders; track $index) {
+        @if (item.currentStatus === EOrderStatus.CREATE) {
+          <app-order-item [order]="item"></app-order-item>
+        }
+      }
+    </div>
+  </nz-tab>
+
+  <nz-tab nzTitle="Đang chuẩn bị">
+    <div class="order-list">
+      <app-order-header></app-order-header>
+      @for (item of orders; track $index) {
+        @if (item.currentStatus === EOrderStatus.PREPARE) {
+          <app-order-item [order]="item"></app-order-item>
+        }
+      }
+    </div>
+  </nz-tab>
+
+  <nz-tab nzTitle="Đang vận chuyển">
+    <div class="order-list">
+      <app-order-header></app-order-header>
+      @for (item of orders; track $index) {
+        @if (item.currentStatus === EOrderStatus.DELIVERY) {
+          <app-order-item [order]="item"></app-order-item>
+        }
+      }
+    </div>
+  </nz-tab>
+
+  <nz-tab nzTitle="Đã giao">
+    <div class="order-list">
+      <app-order-header 
+        [isShowDoneOrderOption]="true"
+        [isShowCancelOrderOption]="false"
+      >
+      </app-order-header>
+      @for (item of orders; track $index) {
+        @if (item.currentStatus === EOrderStatus.DELIVERIED) {
+          <app-order-item 
+            [isShowDoneOrderOption]="true" 
+            [isShowCancelOrderOption]="false"
+            [order]="item"
+          >
+          </app-order-item>
+        }
+      }
+    </div>
+  </nz-tab>
+
+  <nz-tab nzTitle="Đã hủy">
+    <div class="order-list">
+      <app-order-header 
+        [isShowCancelOrderOption]="false"
+      >
+      </app-order-header>
+      @for (item of orders; track $index) {
+        @if (item.currentStatus === EOrderStatus.CANCEL) {
+          <app-order-item 
+            [isShowCancelOrderOption]="false"
+            [order]="item"
+          >
+          </app-order-item>
+        }
+      }
+    </div>
+  </nz-tab>
+
+  <nz-tab nzTitle="Người dùng xác nhận">
+    <div class="order-list">
+      <app-order-header [isShowCancelOrderOption]="false"></app-order-header>
+      @for (item of orders; track $index) {
+        @if (item.currentStatus === EOrderStatus.DONE) {
+          <app-order-item 
+            [isShowCancelOrderOption]="false" 
+            [order]="item"
+          >
+          </app-order-item>
+        }
+      }
+    </div>
+  </nz-tab>
+</nz-tabset>

@@ -9,6 +9,7 @@ export const API_CONFIG: IApiConfig = {
     forgetPassword: `${environment.url}/api/forget-password/`,
     getByToken: `${environment.url}/api/auth/authenticate`,
     get: `${environment.url}/api/users/`,
+    update: `${environment.url}/api/users/`,
   },
   cart: {
     getByIdUser: `${environment.url}/api/carts/id-user`,
@@ -16,6 +17,19 @@ export const API_CONFIG: IApiConfig = {
   },
   order: {
     save: `${environment.url}/api/order/save/`,
+    getByUser: `${environment.url}/api/orders/`,
+    update: `${environment.url}/api/orders/`,
+  },
+  orderDetail: {
+    getByOrder: `${environment.url}/api/order-details/id-order/`,
+  },
+  orderStatus: {
+    update: `${environment.url}/api/order-statuss/`,
+    getByOrderId: `${environment.url}/api/order-statuss/id`,
+  },
+  promotionProduct: {
+    get: `${environment.url}/api/promotion-products/`,
+    getProduct: `${environment.url}/api/promotion-products/barcode/`,
   }, 
   product: {
     get: `${environment.url}/api/products/`,
