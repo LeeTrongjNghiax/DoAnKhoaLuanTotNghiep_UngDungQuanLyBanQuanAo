@@ -2,7 +2,7 @@ export enum EOrderStatus {
   CREATE = "create", 
   PREPARE = "prepare", 
   DELIVERY = "delivery", 
-  DELIVERIED = "deliveried", 
+  DELIVERIED = "delivered", 
   CANCEL = "cancel", 
   DONE = "done", 
 }
