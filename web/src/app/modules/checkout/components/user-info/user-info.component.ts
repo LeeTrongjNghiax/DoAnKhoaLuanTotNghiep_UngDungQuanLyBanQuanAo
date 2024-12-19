@@ -62,6 +62,8 @@ export class UserInfoComponent implements OnInit {
     {label: 'Thanh toán', link: '/checkout'}
   ];
   public values: ISelectItem<string>[] = data.city;
+  public wards: ISelectItem<string>[] = data.ward;
+  public district: ISelectItem<string>[] = data.district;
   @Input() userInfo!: IUserInfo;
   @Output() changeValueEventEmitter: EventEmitter<IUserInfo> = 
     new EventEmitter<IUserInfo>();

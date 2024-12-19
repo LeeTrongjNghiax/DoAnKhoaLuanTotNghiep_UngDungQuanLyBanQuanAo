@@ -51,7 +51,7 @@
 <app-text-field 
   formControlName="address"
   [value]="userInfo.street" 
-  placeholder="Địa chỉ (số nhà, tên đường)"
+  placeholder="Địa chỉ"
   (changeValueEventEmitter)="onChangeAddress($event)"
 >
 </app-text-field>
@@ -78,8 +78,8 @@
   <div class="address-item">
     <p>Phường/Xã</p>
     <app-select-box
-      [selectItems]="values"
-      [value]="values[0].value"
+      [selectItems]="wards"
+      [value]="wards[0].value"
       (changeValueEventEmitter)="onChangeWard($event)"
     >
     </app-select-box>
@@ -88,8 +88,8 @@
   <div class="address-item">
     <p>Quận/Huyện</p>
     <app-select-box
-      [selectItems]="values"
-      [value]="values[0].value"
+      [selectItems]="district"
+      [value]="district[0].value"
       (changeValueEventEmitter)="onChangeDistrict($event)"
     >
     </app-select-box>

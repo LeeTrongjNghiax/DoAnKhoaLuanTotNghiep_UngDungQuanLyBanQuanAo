@@ -8,8 +8,17 @@
 
 <p class="name">{{ product.name }}</p>
 <div class="bottom-row">
-  <p class="price">{{ product.price.toLocaleString() }} đ</p>
-  <svg-icon class="star-icon" src="yellow-star.svg"></svg-icon>
+
+  <div *ngIf="+priceDiscount !== 0; else notDiscount">
+    <del class="price">{{ product.price | formatCurrency }}</del>
+    <p class="price">{{ +product.price - +priceDiscount | formatCurrency }}</p>
+  </div>
+
+  <ng-template #notDiscount>
+    <p class="price">{{ product.price | formatCurrency }}</p>
+  </ng-template>
+
+  <!-- <svg-icon class="star-icon" src="yellow-star.svg"></svg-icon> -->
   <svg-icon class="align-justify-icon" src="align-justify.svg" (click)="toggleModal()"></svg-icon>
 </div>
 

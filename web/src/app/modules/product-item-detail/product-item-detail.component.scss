@@ -29,6 +29,12 @@
         font-weight: 600;
       }
 
+      .price-container {
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-04);
+      }
+
       .size {
         display: flex;
         justify-content: space-between;

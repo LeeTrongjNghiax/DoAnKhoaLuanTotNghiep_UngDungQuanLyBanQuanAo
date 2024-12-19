@@ -18,7 +18,7 @@
       <app-product-catergory
         [label]="category.name"
         [quantity]="100"
-        [image]="'a'"
+        [image]="getCategoryImage(category.id)"
         [link]="'product-list/' + category.id"
       ></app-product-catergory>
     }
@@ -26,5 +26,5 @@
 
 </section>
 
-<app-product-section title="Bán chạy"></app-product-section>
-<app-product-section title="Mới nhất"></app-product-section>
+<app-product-section title="Danh sách sản phẩm"></app-product-section>
+<!-- <app-product-section title="Mới nhất"></app-product-section> -->

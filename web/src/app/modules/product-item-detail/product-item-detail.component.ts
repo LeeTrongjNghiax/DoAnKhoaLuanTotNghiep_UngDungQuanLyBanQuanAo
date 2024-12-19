@@ -12,7 +12,6 @@ import { TNumberFieldComponent } from '../../shared/components/number-field/numb
 import { TButtonComponent } from '../../shared/components/button/button.component';
 import { IProductResponse } from '../../core/interfaces/api/response/product-response';
 import { ProductService } from '../../core/services/product.service';
-import data from '../../../../public/data';
 import { IProductGetByBarcodeResponse } from '../../core/interfaces/api/response/product-get-by-barcode-response';
 import { IBreadcrumb } from '../../shared/components/breadcrumb/types/breadcrumb';
 import { BreadcrumbComponent } from "../../shared/components/breadcrumb/breadcrumb.component";
@@ -33,6 +32,9 @@ import { IUserGetByTokenParams } from '../../core/interfaces/api/parameters/user
 import { IUserGetByTokenResponse } from '../../core/interfaces/api/response/user-get-by-token-response';
 import { ICartUpdateParams } from '../../core/interfaces/api/parameters/cart-update-params';
 import { ICartResponse } from '../../core/interfaces/api/response/cart-response';
+import { PromotionProductService } from '../../core/services/promotion-product.service';
+import { IPromotionProductGetByProductResponse } from '../../core/interfaces/api/response/promotion-product-get-by-product-response';
+import { FormatCurrencyPipe } from '../../shared/pipes/format-currency.pipe';
 
 @Component({
   selector: 'app-product-item-detail',
@@ -53,7 +55,8 @@ import { ICartResponse } from '../../core/interfaces/api/response/cart-response'
     ProductSectionComponent,
     NgOptimizedImage,
     TRadioWithLabelComponent,
-    RadioGroupComponent
+    RadioGroupComponent, 
+    FormatCurrencyPipe, 
 ],
   templateUrl: './product-item-detail.component.html',
   styleUrl: './product-item-detail.component.scss'
@@ -73,6 +76,7 @@ export class ProductItemDetailComponent implements OnInit {
   public selectedProductVariant: string = "";
   public userId: string = '';
   public cart!: ICartResponse;
+  public priceDiscount: string = "";
 
   constructor(
     private route: ActivatedRoute, 
@@ -80,6 +84,7 @@ export class ProductItemDetailComponent implements OnInit {
     private productService: ProductService, 
     private productVariantService: ProductVariantService, 
     private cartService: CartService, 
+    private promotionProductService: PromotionProductService, 
     private messageService: NzMessageService, 
   ) {
     route.params.subscribe(params => {
@@ -151,6 +156,15 @@ export class ProductItemDetailComponent implements OnInit {
           link: `/product-item-detail/${this.product?.barcode}`
         }, 
       ];
+
+      this.promotionProductService.getProduct(this.product.barcode)
+        .pipe(takeUntil(this.destroy))
+        .subscribe(
+          (response: HttpResponse<IPromotionProductGetByProductResponse>) => 
+            this.onPromotionProductGetByProductSuccess(response), 
+          (response: HttpResponse<IPromotionProductGetByProductResponse>) => 
+            this.onPromotionProductGetByProductFail(response), 
+        )
     }
   }
   
@@ -158,6 +172,17 @@ export class ProductItemDetailComponent implements OnInit {
     response: HttpResponse<IProductGetByBarcodeResponse>
   ) {
     console.log(response);
+  }
+
+  public onPromotionProductGetByProductSuccess(res: HttpResponse<IPromotionProductGetByProductResponse>) {
+    console.log(res);
+    if (res.body) {
+      this.priceDiscount = res.body.data.priceDiscount;
+    }
+  }
+
+  public onPromotionProductGetByProductFail(res: HttpResponse<IPromotionProductGetByProductResponse>) {
+    console.log(res);
   }
 
   public onGetProductVariantByBarcodeSuccess(
@@ -251,27 +276,23 @@ export class ProductItemDetailComponent implements OnInit {
           this.onUpdateCartSuccess(response), 
         (response: HttpResponse<ICartResponse>) => 
           this.onUpdateCartFail(response), 
-      )
-
-    if (this.product) {
-      this.messageService.create(
-        'success',
-        'Add product to cart successfully!'
-      )
-    } else {
-      this.messageService.create(
-        'fail',
-        'Add product to cart failed!'
-      )
-    }
+      );
   }
 
   public onUpdateCartSuccess(res: HttpResponse<ICartResponse>) {
     console.log(res);
+    this.messageService.create(
+      'success',
+      'Add product to cart successfully!'
+    );
   }
 
   public onUpdateCartFail(res: HttpResponse<ICartResponse>) {
     console.log(res);
+    this.messageService.create(
+      'fail',
+      'Add product to cart failed!'
+    );
   }
 
   public isAddToCartButtonDisable() {
